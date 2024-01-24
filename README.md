@@ -5,6 +5,4 @@ This repository contains basic code for the [Using Sequences of Life-events to P
 
 Here, we provide a code for a simple dummy data and using the latest versions of Python packages, thus, can be easily extended for your specific use.
 
-Code and data is going to be published by the mid-Feb 2024.
-
 
