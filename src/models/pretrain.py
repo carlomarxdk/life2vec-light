@@ -56,16 +56,16 @@ class TransformerEncoder(pl.LightningModule):
         )
         # 2. MASKED LANGUAGE MODEL
         mlm_pred = self.mlm_decoder(predicted, batch)
-        # 3. CLS TASK
+        # 3. SEQUENCE ORDER PREDICTION Task
         # Embedding of the CLS token
         sop_pred = self.sop_decoder(predicted[:, 0])
         return mlm_pred, sop_pred
 
     def calculate_total_loss(self, mlm_preds, sop_preds, batch):
         mlm_targs = batch["target_tokens"].long()
-        sop_targs = batch["target_cls"].long()
+        sop_targs = batch["target_sop"].long()
         mlm_loss = self.mlm_loss(mlm_preds.permute(0, 2, 1), target=mlm_targs)
-        sop_loss = self.cls_loss(sop_preds, target=sop_targs)
+        sop_loss = self.sop_loss(sop_preds, target=sop_targs)
 
         total_loss = self.sop_weight * sop_loss + self.mlm_weight * mlm_loss
         return total_loss
