@@ -1,0 +1,13 @@
+name: l2v
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.7
+  - pytorch=2.2.0
+  - pytorch-cuda=11.8
+  - pytorch-lightning=2.1.3
+  - pip:
+      - performer-pytorch==1.1.4
