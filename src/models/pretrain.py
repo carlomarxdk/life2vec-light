@@ -28,12 +28,7 @@ class TransformerEncoder(pl.LightningModule):
         self.task = self.hparams.training_task
         log.info("Training task: %s" % self.task)
         if "mlm" in self.task:
-            # Weighting for the loss functions
-            self.register_buffer("sop_weight", torch.tensor(0.2))
-            self.register_buffer("mlm_weight", torch.tensor(0.8))
-            self.register_buffer("sop_class_weight",
-                                 torch.tensor([1/0.8, 1/0.1, 1/0.1]))
-
+            # Number of outputs (for logging purposes)
             self.num_outputs = self.hparams.vocab_size
 
             # 2.1. DECODERS
@@ -41,6 +36,12 @@ class TransformerEncoder(pl.LightningModule):
                 self.hparams, self.transformer.embedding, act="tanh")
             self.sop_decoder = SOP_Decoder(self.hparams)
             # 2.2. LOSS
+            # Weighting for the loss functions
+            self.register_buffer("sop_weight", torch.tensor(0.2))
+            self.register_buffer("mlm_weight", torch.tensor(0.8))
+            self.register_buffer("sop_class_weight",
+                                 torch.tensor([1/0.8, 1/0.1, 1/0.1]))
+            # Loss functions
             self.sop_loss = nn.CrossEntropyLoss(
                 weight=self.sop_class_weight, label_smoothing=0.1)
             self.mlm_loss = nn.CrossEntropyLoss(ignore_index=0)
@@ -48,7 +49,7 @@ class TransformerEncoder(pl.LightningModule):
             raise NotImplementedError()
 
     def forward(self, batch):
-        """Forward pass"""
+        """Forward pass that returns the logits for the masked language model and the sequence order prediction task."""
         # 1. ENCODER INPUT
         predicted = self.transformer(
             x=batch["input_ids"].long(),
@@ -59,6 +60,7 @@ class TransformerEncoder(pl.LightningModule):
         # 3. SEQUENCE ORDER PREDICTION Task
         # Embedding of the CLS token
         sop_pred = self.sop_decoder(predicted[:, 0])
+
         return mlm_pred, sop_pred
 
     def calculate_total_loss(self, mlm_preds, sop_preds, batch):
@@ -78,9 +80,12 @@ class TransformerEncoder(pl.LightningModule):
         return self.calculate_total_loss(mlm_preds, sop_preds, batch)
 
     def training_epoch_end(self, output):
-        """On Epoch End"""
+        """On Train Epoch End: Redraw the projection of the Attention-related matrices"""
         if self.hparams.attention_type == "performer":
             self.transformer.redraw_projection_matrix(-1)
+        else:
+            raise NotImplementedError(
+                "We only have a Performer implementation.")
 
     def validation_epoch_end(self, outputs) -> None:
         """Save the embedding on validation epoch end"""
@@ -100,7 +105,7 @@ class TransformerEncoder(pl.LightningModule):
         return self.calculate_total_loss(mlm_preds, sop_preds, batch)
 
     def configure_optimizers(self):
-        """"""
+        """Configuration of the Optimizer and the Learning Rate Scheduler."""
         no_decay = [
             "bias",
             "norm",
@@ -109,6 +114,9 @@ class TransformerEncoder(pl.LightningModule):
             "token",
             "decoder.g"
         ]
+
+        # It is advised to avoid the decay on the embedding weights, biases of the model and values of the ReZero gates.
+
         optimizer_grouped_parameters = [
             {
                 "params": [
