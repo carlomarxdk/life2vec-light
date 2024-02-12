@@ -13,4 +13,6 @@ Here, we provide a code used with the simple dummy data (+ using the latest vers
 - [ ] Add code with working data pipeline (by the 15th Feb)
 - [ ] Add Data Example (by 15th Feb)
 - [ ] Add Logging support
-- [ ] Add finetuning example
+- [ ] Add finetuning example with the specialised decoder
+- [ ] Make a package (?)
+- [ ] Add `Hydra` Support
