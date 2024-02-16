@@ -17,18 +17,15 @@ class PersonDocument:
     sentences: List[List[str]]
     abspos: List[int]
     age: List[float]
-    timecut_pos: int  # What is this?
     segment: Optional[List[int]] = None
     background: Optional["Background"] = None
     shuffled: bool = False
-    task_info: Optional[JSONSerializable] = None
 
 
 @dataclass
 class Background:
     """Defines the background information about a person"""
 
-    origin: str
     gender: str
     birth_month: int
     birth_year: int
@@ -46,8 +43,8 @@ class Background:
             return [
                 x.origin,
                 x.gender,
-                f"MONTH_{x.birth_month}",
-                f"YEAR_{x.birth_year}",
+                x.birth_month,
+                x.birth_year,
             ]
 
 

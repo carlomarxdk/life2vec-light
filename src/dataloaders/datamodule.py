@@ -13,7 +13,7 @@ import torch
 from pandas.tseries.offsets import MonthEnd
 from torch.utils.data import DataLoader, Dataset
 
-from ..tasks.base import Task, collate_encoded_documents
+from .tasks.base import Task, collate_encoded_documents
 from .dataset import DocumentDataset, ShardedDocumentDataset
 from .decorators import save_parquet, save_pickle
 from .ops import concat_columns_dask, concat_sorted
@@ -61,8 +61,8 @@ class Corpus:
     sources: List[TokenSource]
     population: Population
 
-    reference_date: str = "2008-01-01"
-    threshold: str = "2016-01-01"
+    reference_date: str = "2022-01-01"
+    threshold: str = "2026-01-01"
 
     def __post_init__(self) -> None:
 
@@ -80,19 +80,19 @@ class Corpus:
 
             A :class:`dask.dataframe.DataFrame` object with the following columns
 
-            * PERSON_ID (Index column) - The person ids.
+            * user_id (Index column) - The user ids.
 
-            * START_DATE - Date of sentence as number of days since
+            * start_date - Date of sentence as number of days since
               :attr:`self.reference_date`
 
-            * SENTENCE - The sentence.
+            * sentence - The sentence / life-sentence.
 
-            * AGE - Is calculated bases on the birthday of each person. If the sentences
+            * age - Is calculated bases on the birthday of each person. If the sentences
               already have an AGE columns, this is used instead.
 
-            * GENDER - The gender as specified in the population data
+            * sex - The sex as specified in the population data
 
-            * AFTER_THRESHOLD - a boolean column, indicating whether an event is efter
+            * after_threshold - a boolean column, indicating whether an event is efter
               :attr:`self.threshold`.
 
             * Any additional columns from the population data is carried over as well.

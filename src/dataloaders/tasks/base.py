@@ -184,8 +184,7 @@ class Task:
             timecut_pos = len(after_threshold)
 
         birthday = person_sentences.BIRTHDAY.iloc[0]
-        origin = person_sentences.RES_ORIGIN.iloc[0]
-        gender = person_sentences.GENDER.iloc[0]
+        sex = person_sentences.SEX.iloc[0]
 
         background = Background(
             origin=origin,
