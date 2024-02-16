@@ -7,6 +7,7 @@ Here, we provide a code used with the simple dummy data (+ using the latest vers
 
 ## TO-DO
 
+Note on 16th FEB 2024: **Due to some package updates, the process the takes a bit more time than I expected, I still work on the code**. 
 - [x] Add code for the pretraining (12FEB2024)
 - [ ] More detailed annotation
 - [ ] Add code with working data pipeline (by the 15th Feb)
