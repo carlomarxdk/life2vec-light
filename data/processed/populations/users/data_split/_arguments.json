@@ -1,0 +1,13 @@
+{
+    "self": {
+        "name": "users",
+        "input_csv": "rawdata/users.csv",
+        "earliest_birthday": "01-01-1950",
+        "seed": 42,
+        "train_val_test": [
+            0.7,
+            0.15,
+            0.15
+        ]
+    }
+}

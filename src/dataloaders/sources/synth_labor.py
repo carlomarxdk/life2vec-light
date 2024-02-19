@@ -33,6 +33,7 @@ class SyntheticLaborSource(TokenSource):
     @save_parquet(
         DATA_ROOT / "processed/sources/{self.name}/tokenized",
         on_validation_error="error",
+        # You might want to run the verification (aka that indexes are indeed sorted)
         verify_index=False,
     )
     def tokenized(self) -> dd.DataFrame:
@@ -79,11 +80,11 @@ class SyntheticLaborSource(TokenSource):
         assert isinstance(result, dd.DataFrame)
         return result
 
-    @save_parquet(
-        DATA_ROOT / "interim/sources/{self.name}/parsed",
-        on_validation_error="error",
-        verify_index=False,
-    )
+    # @save_parquet(
+    #    DATA_ROOT / "interim/sources/{self.name}/parsed",
+    #    on_validation_error="error",
+    #    verify_index=False,
+    # )
     def parsed(self) -> dd.DataFrame:
         """
         Parses the CSV file, applies some basic filtering, then saves the result
