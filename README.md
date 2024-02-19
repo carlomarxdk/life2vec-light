@@ -32,6 +32,19 @@ Note on 16th FEB 2024: **Due to some package updates, the process the takes a bi
 - [ ] Add `Hydra` Support
 
 ## Citations
+### How to cite THIS code
+```bibtex
+@misc{https://doi.org/10.5281/zenodo.10680995,
+  doi = {10.5281/ZENODO.10680995},
+  url = {https://zenodo.org/doi/10.5281/zenodo.10680995},
+  author = {Germans Savcisens},
+  title = {GitHub Repository of life2vec-light (carlomarxdk/life2vec-light)},
+  publisher = {Zenodo},
+  year = {2024},
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+```
+### Connected Materials
 ```bibtex
 @article{savcisens2024using,
       author={Savcisens, Germans and Eliassi-Rad, Tina and Hansen, Lars Kai and Mortensen, Laust Hvas and Lilleholt, Lau and Rogers, Anna and Zettler, Ingo and Lehmann, Sune},
