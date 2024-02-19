@@ -18,7 +18,7 @@ You can generate dummy data (that we use here as an example) using the Jupyter N
 Note on 16th FEB 2024: **Due to some package updates, the process the takes a bit more time than I expected, I still work on the code**. 
 - [x] Add code for the pretraining 
 - [ ] More detailed annotation
-- [ ] Add code with working data pipeline (by the 20th Feb)
+- [x] Add code with working data pipeline (by the 20th Feb)
 - [x] Add Data Example (misc/synthetic_data.ipynb)
 - [x] Create a Source file for the Synthetic Labor Data (src/sources/synth_labor.py)
 - [ ] Add Logging support

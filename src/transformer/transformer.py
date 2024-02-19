@@ -2,11 +2,20 @@ import torch
 import torch.nn as nn
 from torch.nn.utils import parametrize
 from src.transformer.embeddings import Embeddings
-from src.transformer.transformer_utils import ScaleNorm, l2_norm, Center, Swish, ACT2FN
+from src.transformer.transformer_utils import ScaleNorm, l2_norm, Center, Swish, gelu, gelu_new, swish
 from src.transformer.modules import EncoderLayer
 import logging
 
 log = logging.getLogger(__name__)
+
+ACT2FN = {
+    "gelu": torch.nn.functional.gelu,
+    "gelu_custom": gelu,
+    "relu": torch.nn.functional.relu,
+    "swish": swish,
+    "gelu_google": gelu_new,
+    "tanh": torch.tanh,
+}
 
 
 class Transformer(nn.Module):

@@ -79,17 +79,13 @@ class TransformerEncoder(pl.LightningModule):
         # 2. LOSS
         return self.calculate_total_loss(mlm_preds, sop_preds, batch)
 
-    def training_epoch_end(self, output):
+    def on_train_epoch_end(self, output):
         """On Train Epoch End: Redraw the projection of the Attention-related matrices"""
         if self.hparams.attention_type == "performer":
             self.transformer.redraw_projection_matrix(-1)
         else:
             raise NotImplementedError(
                 "We only have a Performer implementation.")
-
-    def validation_epoch_end(self, outputs) -> None:
-        """Save the embedding on validation epoch end"""
-        return super().validation_epoch_end(outputs)
 
     def validation_step(self, batch, batch_idx):
         """Validation Step"""

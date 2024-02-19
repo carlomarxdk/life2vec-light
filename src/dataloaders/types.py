@@ -42,7 +42,6 @@ class Background:
             return 4 * ["[UNK]"]
         else:
             return [
-                x.origin,
                 x.gender,
                 x.birth_month,
                 x.birth_year,
