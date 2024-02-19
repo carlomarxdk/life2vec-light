@@ -26,9 +26,9 @@ log = logging.getLogger(__name__)
 
 
 def compute_age(date: pd.Series, birthday: pd.Series) -> pd.Series:
-    age = date.dt.year - birthday.dt.year
+    age = date.dt.year - birthday.year
     # type: ignore
-    age -= (date + MonthEnd(1)).dt.day_of_year < birthday.dt.day_of_year
+    # age -= (date + MonthEnd(1)).dt.day_of_year < birthday.dt.day_of_year
     # Still leaves some inconstistent birthdays (mainly due to 1-off errors i think)
     return age
 
@@ -51,8 +51,8 @@ class Corpus:
     :param sources: List of token sources from which to generate sentences
     :param population: Cohort to generate sentences for.
 
-    :param reference_date:
-    :param threshold:
+    :param reference_date: the day from which we can calculate the ABSOLUTE POSITION
+    :param threshold: the day at which we want to stop or cut the sequence.
 
     """
 
@@ -61,7 +61,7 @@ class Corpus:
     sources: List[TokenSource]
     population: Population
 
-    reference_date: str = "2022-01-01"
+    reference_date: str = "2020-01-01"
     threshold: str = "2026-01-01"
 
     def __post_init__(self) -> None:
@@ -69,7 +69,11 @@ class Corpus:
         self._reference_date = pd.to_datetime(self.reference_date)
         self._threshold = pd.to_datetime(self.threshold)
 
-    @save_parquet(DATA_ROOT / "processed/corpus/{self.name}/sentences/{split}")
+    @save_parquet(
+        DATA_ROOT / "processed/corpus/{self.name}/sentences/{split}",
+        on_validation_error="recompute",
+        verify_index=False,
+    )
     def combined_sentences(self, split: str) -> dd.DataFrame:
         """Combines the sentences from each source. Filters the data to only consist
         of sentences for the given :obj:`split`.
@@ -105,39 +109,39 @@ class Corpus:
         combined_sentences = concat_sorted(
             [sp.loc[lambda x: x.index.isin(data_split)]
              for sp in sentences_parts],
-            columns=["START_DATE"],
+            columns=["RECORD_DATE"],
         ).join(population)
 
-        # Fix age from sources without age using birthday
-        isna = combined_sentences.AGE.isna()
-        combined_sentences["AGE"] = combined_sentences["AGE"].where(
-            ~isna,
-            compute_age(combined_sentences.START_DATE,
-                        combined_sentences.BIRTHDAY),
-        )
+        combined_sentences["BIRTHDAY"] = combined_sentences["BIRTHDAY"].apply(
+            lambda x: pd.to_datetime(x, errors='coerce'), meta=('BIRTHDAY', 'datetime64[ns]'))
+        # NOT THE METHOD WE USED IN LIFE2vec
+        combined_sentences["AGE"] = combined_sentences.apply(
+            lambda x: x.RECORD_DATE.year - x.BIRTHDAY.year, axis=1, meta=('AGE', 'int64'))
 
         combined_sentences["AFTER_THRESHOLD"] = (
-            combined_sentences.START_DATE >= self._threshold
+            combined_sentences.RECORD_DATE >= self._threshold
         )
 
         # Date as days from reference date <- maybe move into task
 
-        combined_sentences["START_DATE"] = (
-            combined_sentences.START_DATE - self._reference_date
+        combined_sentences["RECORD_DATE"] = (
+            combined_sentences.RECORD_DATE - self._reference_date
         ).dt.days.astype(int)
 
         # DASK SPECIFIC
         combined_sentences = combined_sentences.reset_index().set_index(
-            "PERSON_ID", sorted=True, npartitions="auto")
+            "USER_ID", sorted=True, npartitions="auto")
 
         assert isinstance(combined_sentences, dd.DataFrame)
 
         return combined_sentences
 
-    @save_parquet(
-        DATA_ROOT / "interim/corpus/{self.name}/sentences_{source.name}",
-        on_validation_error="recompute",
-    )
+    # for big datasets you might record intermediate steps
+    # @save_parquet(
+    #    DATA_ROOT / "interim/corpus/{self.name}/sentences_{source.name}",
+    #    on_validation_error="recompute",
+    #    verify_index=False,
+    # )
     def sentences(self, source: TokenSource) -> dd.DataFrame:
         """Returns the sentences from :obj:`source`, ie all the fields in
         :attr:`source.fields` in the transformed tokenized data concatenated as strings.
@@ -155,7 +159,7 @@ class Corpus:
             )
             assert is_string or is_known_cat
 
-        cols = ["START_DATE", "SENTENCE"]
+        cols = ["RECORD_DATE", "SENTENCE"]
         if "AGE" in tokenized.columns:
             cols.append("AGE")
 
@@ -173,6 +177,7 @@ class Corpus:
         DATA_ROOT
         / "interim/corpus/{self.name}/tokenized_and_transformed/{source.name}",
         on_validation_error="recompute",
+        verify_index=False,
     )
     def tokenized_and_transformed(self, source: TokenSource) -> dd.DataFrame:
         """Returns the tokenized data for :obj:`source`, with any
@@ -312,9 +317,9 @@ class L2VDataModule(pl.LightningDataModule):
         """Prepares the dataset for some split (train/val/test).
 
         Loads the combined sentences of the corpus, then for each parquet partition,
-        filters according to the split and using pandas group_by, for each PERSON_ID
+        filters according to the split and using pandas group_by, for each USER_ID
         calls the :meth:`get_document` method of :attr:`task` to get the
-        person documents. The resulting list of documents then gets saved using
+        user documents. The resulting list of documents then gets saved using
         :class:`src.data_new.dataset.DocumentDataset`.
 
         :return: Returns a :class:`dask.dataframe.Series` with a single :code:`True`
@@ -347,7 +352,7 @@ class L2VDataModule(pl.LightningDataModule):
             )
 
             records = (
-                partition.groupby(level="PERSON_ID")
+                partition.groupby(level="USER_ID")
                 .apply(self.task.get_document)
                 .to_list()
             )

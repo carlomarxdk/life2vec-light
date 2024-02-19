@@ -174,7 +174,7 @@ class Task:
 
         person_id = person_sentences.name
         sentences = [x.split(" ") for x in person_sentences.SENTENCE]
-        abspos = (person_sentences.START_DATE + 1).tolist()
+        abspos = (person_sentences.RECORD_DATE + 1).tolist()
         age = person_sentences.AGE.tolist()
 
         after_threshold = person_sentences.AFTER_THRESHOLD
@@ -185,10 +185,10 @@ class Task:
 
         birthday = person_sentences.BIRTHDAY.iloc[0]
         sex = person_sentences.SEX.iloc[0]
+        timecut_pos = 0  # fix later for the demo
 
         background = Background(
-            origin=origin,
-            gender=gender,
+            gender=sex,
             birth_month=birthday.month,
             birth_year=birthday.year,
         )

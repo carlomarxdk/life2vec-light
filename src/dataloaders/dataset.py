@@ -9,7 +9,7 @@ import h5py
 import numpy as np
 from torch.utils.data import ConcatDataset, Dataset
 
-from tasks.base import Task
+from .tasks.base import Task
 
 from .types import Background, PersonDocument, EncodedDocument
 

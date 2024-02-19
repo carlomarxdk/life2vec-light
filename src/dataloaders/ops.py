@@ -61,3 +61,26 @@ def concat_columns(
     res = _concat_sub(indices, values, sep=sep)
     out[~is_na] = res
     return pd.Series(out, index=old_index, dtype="string")
+
+
+# @numba.jit(nopython=True)
+def _concat_sub(indices: np.ndarray, values: np.ndarray, sep: str = " ") -> List[str]:
+
+    # Start each sequence
+    (starts,) = np.nonzero(np.diff(indices))
+    starts += 1
+
+    out = []
+
+    # If empty, all indices are the same, return all values concatenated
+    if len(starts) == 0:
+        out.append(sep.join(values))
+        return out
+
+    idx_prev = 0
+    for idx in starts:
+        out.append(sep.join(values[idx_prev:idx]))
+        idx_prev = idx
+
+    out.append(sep.join(values[starts[-1]:]))
+    return out

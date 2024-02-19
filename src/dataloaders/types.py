@@ -19,6 +19,7 @@ class PersonDocument:
     age: List[float]
     segment: Optional[List[int]] = None
     background: Optional["Background"] = None
+    timecut_pos: Optional[int] = None
     shuffled: bool = False
 
 

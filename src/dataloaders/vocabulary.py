@@ -174,7 +174,7 @@ class CorpusVocabulary(Vocabulary):
         counts = {}
         for field_ in source.field_labels():
             # Constrained Counts (number of sequences that have a token)
-            counts[field_] = tokenized.reset_index()[["PERSON_ID", field_]].drop_duplicates()[
+            counts[field_] = tokenized.reset_index()[["USER_ID", field_]].drop_duplicates()[
                 field_].value_counts()
             # Full counts (without the uniqueness constraint)
         (counts,) = dask.compute(counts)
