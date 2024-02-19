@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/747774269.svg)](https://zenodo.org/doi/10.5281/zenodo.10680995)
+
 # life2vec-light
 Basic implementation of the life2vec model with the dummy data. 
 
