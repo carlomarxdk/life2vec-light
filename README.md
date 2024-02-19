@@ -33,7 +33,19 @@ Note on 16th FEB 2024: **Due to some package updates, the process the takes a bi
 
 ## Citations
 ### How to cite THIS code
-Click on the DOI badge at the top of the README to see the correct way to cite the code.
+```bibtex
+@misc{https://doi.org/10.5281/zenodo.10680995,
+      doi = {10.5281/ZENODO.10680995},
+      url = {https://zenodo.org/doi/10.5281/zenodo.10680995},
+      author = {Germans Savcisens},
+      title = {Github Repository for carlomarxdk/life2vec-light},
+      publisher = {Zenodo},
+      year = {2024},
+      copyright = {Creative Commons Attribution 4.0 International}
+}
+```
+If you want to cite a *specific* release, check the DOI number at the top of the README file (or see details of the release).
+
 ### Connected Materials
 ```bibtex
 @article{savcisens2024using,
