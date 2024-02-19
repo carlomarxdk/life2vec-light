@@ -5,6 +5,14 @@ This repository contains basic code for the [Using Sequences of Life-events to P
 
 Here, we provide a code used with the simple dummy data (+ using the latest versions of Python packages). Thus, you can easily extended it for your specific use.
 
+
+## DATA
+
+You can generate dummy data (that we use here as an example) using the Jupyter Notebook in `misc/synthetic_data.ipynb`:
+1. Generate the dummy *user database*, aka `users.csv`,
+2. Generate the dummy *labor dataset*, aka `synth_labor.csv`,
+3. Move both to the `data\rawdata` folder.
+
 ## TO-DO
 
 Note on 16th FEB 2024: **Due to some package updates, the process the takes a bit more time than I expected, I still work on the code**. 
