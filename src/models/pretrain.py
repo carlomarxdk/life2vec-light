@@ -79,7 +79,7 @@ class TransformerEncoder(pl.LightningModule):
         # 2. LOSS
         return self.calculate_total_loss(mlm_preds, sop_preds, batch)
 
-    def on_train_epoch_end(self, output):
+    def on_train_epoch_end(self, *kwargs):
         """On Train Epoch End: Redraw the projection of the Attention-related matrices"""
         if self.hparams.attention_type == "performer":
             self.transformer.redraw_projection_matrix(-1)

@@ -1,24 +1,32 @@
 [![DOI](https://zenodo.org/badge/747774269.svg)](https://zenodo.org/doi/10.5281/zenodo.10680995)
 
 # life2vec-light
-Basic implementation of the life2vec model with the dummy data. 
+Basic implementation of the `life2vec` model with the dummy data. 
 
-This repository contains basic code for the [Using Sequences of Life-events to Predict Human Lives](https://www.nature.com/articles/s43588-023-00573-5) (life2vec) paper. The [SocialComplexityLab/life2vec](https://github.com/SocialComplexityLab/life2vec) depends (in large) on the specific structure of the data, and the version of the packages available.
+This repository contains basic code for the [Using Sequences of Life-events to Predict Human Lives](https://www.nature.com/articles/s43588-023-00573-5) (life2vec) paper. The [SocialComplexityLab/life2vec](https://github.com/SocialComplexityLab/life2vec) depends (in large) on the specific structure of the data and the version of the packages available.
 
-Here, we provide a code used with the simple dummy data (+ using the latest versions of Python packages), and the code contains only the backbone of the model.
-Thus, you can easily extended it for your specific use. 
+Here, we provide a code with the simple dummy data (+ using the latest versions of Python packages) - the code contains only the backbone of the model.
+Thus, you can easily extend it for your specific use. 
 
-To try out a simple step-by-step workflow open the `simple_workflow.ipynb` notebook.
+Open the `simple_workflow.ipynb` notebook to try a simple step-by-step workflow. The specifications for the Anaconda environment are located in `Environment.yml`; I run the code on the Windows Subsystem for Linux (WS2).
+
+## What is missing?
+
+Compared to the [original implementation](https://github.com/SocialComplexityLab/life2vec) of the `life2vec` model, this repository does not include the following:
+1. Bookkeeping and logging functionality,
+2. Data visualisation functionality,
+3. Code for experiments, including robustness tests,
+4. Implementation of loss and metric functions mentioned in the paper.
 
 
-## DATA
+## Data
 
 You can generate dummy data (that we use here as an example) using the Jupyter Notebook in `misc/synthetic_data.ipynb`:
 1. Generate the dummy *user database*, aka `users.csv`,
 2. Generate the dummy *labor dataset*, aka `synth_labor.csv`,
 3. Move both to the `data\rawdata` folder.
 
-## TO-DO
+## To Do
 
 Note on 16th FEB 2024: **Due to some package updates, the process the takes a bit more time than I expected, I still work on the code**. 
 - [x] Add code for the pretraining 
@@ -28,8 +36,7 @@ Note on 16th FEB 2024: **Due to some package updates, the process the takes a bi
 - [x] Create a Source file for the Synthetic Labor Data (src/sources/synth_labor.py)
 - [ ] Add Logging support
 - [ ] Add finetuning example with the specialised decoder
-- [ ] Make a package (?)
-- [ ] Add `Hydra` Support
+
 
 ## Citations
 ### How to cite THIS code
