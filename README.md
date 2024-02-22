@@ -20,15 +20,12 @@ Compared to the [original implementation](https://github.com/SocialComplexityLab
 
 
 ## Data
-
 You can generate dummy data (that we use here as an example) using the Jupyter Notebook in `misc/synthetic_data.ipynb`:
 1. Generate the dummy *user database*, aka `users.csv`,
 2. Generate the dummy *labor dataset*, aka `synth_labor.csv`,
 3. Move both to the `data\rawdata` folder.
 
 ## To Do
-
-Note on 16th FEB 2024: **Due to some package updates, the process the takes a bit more time than I expected, I still work on the code**. 
 - [x] Add code for the pretraining 
 - [ ] More detailed annotation
 - [x] Add code with working data pipeline (by the 20th Feb)
