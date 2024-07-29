@@ -5,10 +5,17 @@ Basic implementation of the `life2vec` model with the dummy data.
 
 This repository contains basic code for the [Using Sequences of Life-events to Predict Human Lives](https://www.nature.com/articles/s43588-023-00573-5) (life2vec) paper. The [SocialComplexityLab/life2vec](https://github.com/SocialComplexityLab/life2vec) depends (in large) on the specific structure of the data and the version of the packages available.
 
-Here, we provide a code with the simple dummy data (+ using the latest versions of Python packages) - the code contains only the backbone of the model.
-Thus, you can easily extend it for your specific use. 
+The code here contains only the model's backbone. Thus, you can easily extend it for your specific use. 
 
-Open the `simple_workflow.ipynb` notebook to try a simple step-by-step workflow. The specifications for the Anaconda environment are located in `Environment.yml`; I run the code on the Windows Subsystem for Linux (WS2).
+### A. Simple case
+In the `simple_workflow.ipynb` notebook, we provide code with simple dummy data (using the latest versions of Python packages) to try a simple step-by-step workflow.
+
+Open the `simple_workflow.ipynb` notebook to try a simple step-by-step workflow. 
+
+### B. Case with two datasets
+In the `workflow_with_two_datasets.ipynb`, we provide an example for using more than one dataset.
+
+**Note**: The specification for the environment is located in the `requirements.txt` (Tutorial on how to set up an environment is [here](https://medium.com/geekculture/setting-up-python-environment-in-macos-using-pyenv-and-pipenv-116293da8e72)). I have removed the dependency on the `conda`. 
 
 ## What is missing?
 
@@ -23,16 +30,17 @@ Compared to the [original implementation](https://github.com/SocialComplexityLab
 You can generate dummy data (that we use here as an example) using the Jupyter Notebook in `misc/synthetic_data.ipynb`:
 1. Generate the dummy *user database*, aka `users.csv`,
 2. Generate the dummy *labor dataset*, aka `synth_labor.csv`,
-3. Move both to the `data\rawdata` folder.
+3. Generate the dummy *health dataset*, aka `synth_health.csv`
 
 ## To Do
 - [x] Add code for the pretraining 
-- [ ] More detailed annotation
-- [x] Add code with working data pipeline (by the 20th Feb)
-- [x] Add Data Example (misc/synthetic_data.ipynb)
+- [x] Add code with a working data pipeline
+- [x] Add a dummy dataset (see **labour** data in `misc/synthetic_data.ipynb`)
+- [x] Add an example with a noisy data (see **health** dataset in `misc/synthetic_data.ipynb`)
 - [x] Create a Source file for the Synthetic Labor Data (src/sources/synth_labor.py)
+- [x] A working example with two data sources in `workflow_two_datasets.ipynb`
 - [ ] Add Logging support
-- [ ] Add finetuning example with the specialised decoder
+- [ ] Add a finetuning example with the specialized decoder
 
 
 ## Citations
