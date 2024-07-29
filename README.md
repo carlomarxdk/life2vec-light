@@ -15,7 +15,7 @@ Open the `simple_workflow.ipynb` notebook to try a simple step-by-step workflow.
 ### B. Case with two datasets
 In the `workflow_with_two_datasets.ipynb`, we provide an example for using more than one dataset.
 
-**Note**: The specification for the environment is located in the `requirements.txt` (Tutorial on how to set up an environment is [here](https://medium.com/geekculture/setting-up-python-environment-in-macos-using-pyenv-and-pipenv-116293da8e72). I have removed the dependency on the `conda`. 
+**Note**: The specification for the environment is located in the `requirements.txt` (Tutorial on how to set up an environment is [here](https://medium.com/geekculture/setting-up-python-environment-in-macos-using-pyenv-and-pipenv-116293da8e72)). I have removed the dependency on the `conda`. 
 
 ## What is missing?
 
@@ -30,7 +30,7 @@ Compared to the [original implementation](https://github.com/SocialComplexityLab
 You can generate dummy data (that we use here as an example) using the Jupyter Notebook in `misc/synthetic_data.ipynb`:
 1. Generate the dummy *user database*, aka `users.csv`,
 2. Generate the dummy *labor dataset*, aka `synth_labor.csv`,
-3. Generate the du,my *health dataset*, aka `synth_health.csv`
+3. Generate the dummy *health dataset*, aka `synth_health.csv`
 
 ## To Do
 - [x] Add code for the pretraining 
