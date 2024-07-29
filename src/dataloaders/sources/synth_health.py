@@ -8,28 +8,25 @@ import pandas as pd
 from ..decorators import save_parquet
 from ..ops import sort_partitions
 from ..serialize import DATA_ROOT
-from .base import FIELD_TYPE, TokenSource, Binned
+from .base import FIELD_TYPE, TokenSource
 
 
 @dataclass
-class SyntheticLaborSource(TokenSource):
-    """This generates tokens based on information from the Synthetic Labor dataset.
+class SyntheticHealthSource(TokenSource):
+    """This generates tokens based on information from the Synthetic Health dataset.
 
     :param name: The name of the dataset/source.
     :param fields: The columns to include in the dataset (in case you need to bin the continue variables use 'Binned' class).
-    :param input_csv: CSV file from which to load the Synthetic Labor Dataset.
+    :param input_csv: CSV file from which to load the Synthetic Health Dataset.
     """
 
-    name: str = "synth_labor"
+    name: str = "synth_health"
     fields: List[FIELD_TYPE] = field(
         default_factory=lambda: [
-            Binned("INCOME", prefix="INCOME", n_bins=50),
-            "CITY",
-            "OCCUPATION",
-            "INDUSTRY"]
+            "DIAGNOSIS",
+            "PATIENT_TYPE"]
     )
-
-    input_csv: Path = DATA_ROOT / "rawdata" / "synth_labor.csv"
+    input_csv: Path = DATA_ROOT / "rawdata" / "synth_health.csv"
 
     @save_parquet(
         DATA_ROOT / "processed/sources/{self.name}/tokenized",
@@ -49,11 +46,9 @@ class SyntheticLaborSource(TokenSource):
                 ["RECORD_DATE", *self.field_labels()]
             ]
             .assign(
-                OCCUPATION=lambda x: "OCC_" + x.OCCUPATION,
-                CITY=lambda x: "CITY_" + x.CITY,
-                INDUSTRY=lambda x: "IND_" + x.INDUSTRY,
+                DIAGNOSIS=lambda x: "DIAG_" + x.DIAGNOSIS,
+                PATIENT_TYPE=lambda x: "TYPE_" + x.PATIENT_TYPE,
             )
-            .assign(INCOME=lambda x: x.INCOME.where(lambda x: x > 0, pd.NA))
             # This is important for performance
             .reset_index().set_index("USER_ID", sorted=True)
             # CHOOSE WHAT IS BEST FOR YOUR DATA
@@ -83,6 +78,7 @@ class SyntheticLaborSource(TokenSource):
         assert isinstance(result, dd.core.DataFrame)
         return result
 
+    # If you data is too large, uncomment the @save_parquete to save the intermediate results
     # @save_parquet(
     #    DATA_ROOT / "interim/sources/{self.name}/parsed",
     #    on_validation_error="error",
@@ -97,11 +93,9 @@ class SyntheticLaborSource(TokenSource):
 
         columns = [
             "USER_ID",
-            "OCCUPATION",
-            "CITY",
-            "INDUSTRY",
+            "DIAGNOSIS",
+            "PATIENT_TYPE",
             "RECORD_DATE",
-            "INCOME"
         ]
 
         ddf = dd.read_csv(
@@ -112,10 +106,8 @@ class SyntheticLaborSource(TokenSource):
             assume_missing=True,
             dtype={
                 "USER_ID": int,  # Deal with missing values
-                "OCCUPATION": "string",
-                "CITY": "string",
-                "INDUSTRY": "string",
-                "INCOME": float
+                "DIAGNOSIS": "string",
+                "PATIENT_TYPE": "string",
             },
             blocksize="256MB",
         )

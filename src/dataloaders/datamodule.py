@@ -74,7 +74,7 @@ class Corpus:
         on_validation_error="recompute",
         verify_index=False,
     )
-    def combined_sentences(self, split: str) -> dd.DataFrame:
+    def combined_sentences(self, split: str) -> dd.core.DataFrame:
         """Combines the sentences from each source. Filters the data to only consist
         of sentences for the given :obj:`split`.
 
@@ -132,7 +132,7 @@ class Corpus:
         combined_sentences = combined_sentences.reset_index().set_index(
             "USER_ID", sorted=True, npartitions="auto")
 
-        assert isinstance(combined_sentences, dd.DataFrame)
+        assert isinstance(combined_sentences, dd.core.DataFrame)
 
         return combined_sentences
 
@@ -142,7 +142,7 @@ class Corpus:
     #    on_validation_error="recompute",
     #    verify_index=False,
     # )
-    def sentences(self, source: TokenSource) -> dd.DataFrame:
+    def sentences(self, source: TokenSource) -> dd.core.DataFrame:
         """Returns the sentences from :obj:`source`, ie all the fields in
         :attr:`source.fields` in the transformed tokenized data concatenated as strings.
         """
@@ -169,7 +169,7 @@ class Corpus:
             SENTENCE=concat_columns_dask(tokenized, columns=list(field_labels))
         )[cols]
 
-        assert isinstance(sentences, dd.DataFrame)
+        assert isinstance(sentences, dd.core.DataFrame)
 
         return sentences
 
@@ -179,7 +179,7 @@ class Corpus:
         on_validation_error="recompute",
         verify_index=False,
     )
-    def tokenized_and_transformed(self, source: TokenSource) -> dd.DataFrame:
+    def tokenized_and_transformed(self, source: TokenSource) -> dd.core.DataFrame:
         """Returns the tokenized data for :obj:`source`, with any
         :class:`src.sources.base.Field` tranformations applied.
         """
@@ -189,7 +189,7 @@ class Corpus:
         for field in fields_to_transform:
             tokenized[field.field_label] = field.transform(
                 tokenized[field.field_label])
-        assert isinstance(tokenized, dd.DataFrame)
+        assert isinstance(tokenized, dd.core.DataFrame)
         return tokenized
 
     @save_pickle(
@@ -252,6 +252,7 @@ class L2VDataModule(pl.LightningDataModule):
         super().__init__()
         assert self.name != ""
         self.task.register(self)
+        self.processor = None
 
     @property
     def dataset_root(self) -> Path:
@@ -313,7 +314,7 @@ class L2VDataModule(pl.LightningDataModule):
         with open(self.dataset_root / "_arguments", "wb") as f:
             pickle.dump(self._arguments(), f)
 
-    def prepare_data_split(self, split: str) -> dd.Series:
+    def prepare_data_split(self, split: str) -> dd.core.Series:
         """Prepares the dataset for some split (train/val/test).
 
         Loads the combined sentences of the corpus, then for each parquet partition,
@@ -375,7 +376,7 @@ class L2VDataModule(pl.LightningDataModule):
             return True
 
         result = data.map_partitions(process_partition, meta=(None, bool))
-        assert isinstance(result, dd.Series)
+        assert isinstance(result, dd.core.Series)
 
         return result
 
@@ -416,6 +417,8 @@ class L2VDataModule(pl.LightningDataModule):
             generator=torch.Generator(),
             pin_memory=self.pin_memory,
             persistent_workers=self.persistent_workers,
+            multiprocessing_context='fork' if torch.backends.mps.is_available() else None,
+            # "fork" in case you run it on MPS cluster, otherwise, None
         )
 
     def train_dataloader(self) -> DataLoader:

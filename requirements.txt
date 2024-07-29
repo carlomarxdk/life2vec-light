@@ -1,0 +1,11 @@
+torch==2.3.0
+pytorch-lightning==2.3.3
+numpy==1.26.3
+pandas>=2.1.1
+dask==2024.4.1
+matplotlib
+h5py>=3.9.0
+performer-pytorch>=1.1.4
+ipykernel
+pyarrow
+torchmetrics

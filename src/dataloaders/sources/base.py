@@ -17,11 +17,11 @@ class Field:
 
     field_label: str
 
-    def transform(self, x: dd.Series) -> dd.Series:
+    def transform(self, x: dd.core.Series) -> dd.core.Series:
         """Returns data as-is. Implement in a subclass to apply a transformation"""
         return x
 
-    def fit(self, x: dd.DataFrame) -> None:
+    def fit(self, x: dd.core.DataFrame) -> None:
         """Called on the train partition of the tokenized data. Prepares state for
         applying :meth:`transform`"""
 
@@ -45,7 +45,7 @@ class Binned(Field):
     def __post_init__(self) -> None:
         self.bins_ = None
 
-    def transform(self, x: dd.Series) -> dd.Series:
+    def transform(self, x: dd.core.Series) -> dd.core.Series:
         """
         Applies binning to supplied values.
 
@@ -83,10 +83,10 @@ class Binned(Field):
         dtype = pd.CategoricalDtype(categories)
 
         result = tmp_frame["_digitized"].rename(name).astype(dtype)
-        assert isinstance(result, dd.Series)
+        assert isinstance(result, dd.core.Series)
         return result
 
-    def fit(self, x: dd.DataFrame) -> None:
+    def fit(self, x: dd.core.DataFrame) -> None:
         """
         Computes :attr:`n_bins`-1 quntiles of x[:attr:`field_label`]. The calculated
         bin-edges are stores in :attr:`bins_`
@@ -120,7 +120,7 @@ class TokenSource:
     name: str
     fields: List[FIELD_TYPE]
 
-    def tokenized(self) -> dd.DataFrame:
+    def tokenized(self) -> dd.core.DataFrame:
         """
         Method to deliver the tokenized data. Should return a
         :class:`dask.dataframe.DataFrame` object.

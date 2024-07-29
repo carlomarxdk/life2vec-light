@@ -6,6 +6,8 @@ from typing import TYPE_CHECKING, Callable, Dict, List, TypeVar
 import numpy as np
 import pandas as pd
 import torch
+from functools import partial
+
 
 from src.dataloaders.augment import (
     add_noise2time,
@@ -30,6 +32,12 @@ def collate_encoded_documents(
 
 
 _TaskT = TypeVar("_TaskT", bound="Task")
+
+
+def preprocessor(task: _TaskT, x: PersonDocument, is_train: bool) -> "EncodedDocument[_TaskT]":
+    x = task.augment_document(x, is_train=is_train)
+    x = task.clip_document(x)
+    return task.encode_document(x)
 
 
 @dataclass
@@ -69,6 +77,7 @@ class Task:
     # General
     name: str
     max_length: int
+    # It True, then don't include the [SEP] token between sentences.
     no_sep: bool = False
 
     # Augmentation
@@ -90,12 +99,7 @@ class Task:
         self: _TaskT, is_train: bool
     ) -> Callable[[PersonDocument], "EncodedDocument[_TaskT]"]:
 
-        def preprocessor(x: PersonDocument) -> "EncodedDocument[_TaskT]":
-            x = self.augment_document(x, is_train=is_train)
-            x = self.clip_document(x)
-            return self.encode_document(x)
-
-        return preprocessor
+        return partial(preprocessor, self, is_train=is_train)
 
     def augment_document(
         self, document: PersonDocument, is_train: bool
@@ -129,7 +133,7 @@ class Task:
             if p[3] < self.p_sequence_hide_background:
                 document.background = None
             # 4. DROP TOKENS FROM THE SEQUENCE
-            if self.p_sentence_drop_tokens > .0:
+            if p[4] < self.p_sentence_drop_tokens:
                 document = drop_tokens(document, p=self.p_sentence_drop_tokens)
 
         # 5. ADD SEGMENT
@@ -185,7 +189,6 @@ class Task:
 
         birthday = person_sentences.BIRTHDAY.iloc[0]
         sex = person_sentences.SEX.iloc[0]
-        timecut_pos = 0  # fix later for the demo
 
         background = Background(
             gender=sex,

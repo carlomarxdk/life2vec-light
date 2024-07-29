@@ -1,0 +1,1287 @@
+USER_ID,RECORD_DATE,DIAGNOSIS,PATIENT_TYPE
+1,2020-05-10,,Outpatient
+1,2021-04-01,E,Outpatient
+1,2022-07-03,B,Telehealth
+1,2022-08-10,I,Outpatient
+1,2028-04-21,J,Urgent Care
+2,2021-01-14,B,Emergency
+2,2021-09-28,F,Inpatient
+2,2026-08-10,,Outpatient
+2,2027-04-15,,Urgent Care
+2,2027-10-30,F,Emergency
+3,2025-02-24,,Inpatient
+3,2026-10-08,A,Telehealth
+4,2022-07-22,B,Outpatient
+4,2023-04-15,J,Outpatient
+4,2027-11-25,A,Telehealth
+4,2029-09-19,G,
+5,2023-12-26,E,Telehealth
+5,2027-02-16,C,Emergency
+5,2027-08-31,J,Telehealth
+6,2025-12-27,C,Urgent Care
+7,2022-07-27,F,Urgent Care
+7,2023-01-01,D,Ambulatory
+7,2023-01-10,F,Inpatient
+8,2021-07-25,,Ambulatory
+8,2022-12-12,J,Urgent Care
+8,2023-07-12,H,Urgent Care
+8,2024-01-22,C,
+8,2029-12-02,C,
+9,2020-09-17,G,Ambulatory
+9,2021-01-07,B,
+9,2027-01-14,G,Ambulatory
+10,2025-12-07,I,Inpatient
+10,2027-08-18,I,Emergency
+10,2028-08-14,B,Emergency
+11,2021-10-09,A,
+11,2025-09-10,E,Telehealth
+11,2029-10-27,I,
+12,2020-01-03,H,Inpatient
+12,2021-04-03,,Outpatient
+12,2026-10-30,C,Emergency
+12,2028-07-20,I,Ambulatory
+14,2029-11-05,B,Telehealth
+15,2021-06-09,I,Outpatient
+15,2022-12-21,D,Ambulatory
+15,2029-02-24,I,Outpatient
+16,2020-09-19,A,Ambulatory
+16,2025-01-23,D,Outpatient
+16,2026-03-18,J,
+16,2027-07-14,H,Ambulatory
+16,2027-09-26,E,Urgent Care
+19,2020-05-08,B,Ambulatory
+19,2022-09-01,H,Outpatient
+19,2025-04-20,H,Urgent Care
+19,2026-01-17,J,
+19,2027-01-28,D,Inpatient
+20,2021-01-21,G,Emergency
+21,2024-08-10,A,Telehealth
+21,2027-04-30,A,
+21,2028-03-01,B,Outpatient
+22,2022-02-18,C,Urgent Care
+23,2023-02-14,D,Inpatient
+24,2021-11-12,H,Urgent Care
+24,2026-01-23,B,Outpatient
+24,2029-01-22,A,Telehealth
+25,2029-09-11,A,Outpatient
+26,2020-01-09,E,Urgent Care
+26,2023-03-14,I,Telehealth
+26,2028-01-21,C,Outpatient
+27,2022-06-10,J,Telehealth
+27,2026-01-29,F,
+29,2020-10-05,,Inpatient
+29,2020-11-24,B,Ambulatory
+29,2025-05-06,A,Ambulatory
+29,2029-12-25,J,Ambulatory
+31,2020-12-01,J,Ambulatory
+31,2024-06-09,E,Urgent Care
+31,2025-11-11,E,Outpatient
+31,2027-07-06,D,Emergency
+32,2026-12-19,B,Ambulatory
+32,2028-06-06,A,
+33,2025-09-03,C,Emergency
+35,2024-02-22,C,Urgent Care
+36,2021-04-17,I,
+36,2025-12-06,I,Emergency
+36,2027-06-10,C,Emergency
+36,2027-11-21,,Telehealth
+37,2023-02-28,F,Outpatient
+37,2027-09-16,I,Urgent Care
+38,2024-09-30,A,Inpatient
+38,2029-06-27,B,Telehealth
+39,2028-04-24,I,Telehealth
+39,2028-08-24,E,Outpatient
+40,2026-04-16,B,Inpatient
+40,2029-05-11,J,Ambulatory
+40,2029-11-26,I,
+41,2024-10-26,A,Emergency
+42,2027-08-25,B,Emergency
+42,2028-12-04,F,Outpatient
+43,2021-09-25,C,Outpatient
+43,2028-04-04,,Telehealth
+43,2029-11-19,A,Outpatient
+43,2029-11-30,J,Telehealth
+44,2028-10-30,G,Inpatient
+44,2029-02-02,E,Outpatient
+44,2029-02-26,F,Emergency
+44,2029-03-14,,Inpatient
+44,2029-08-17,D,
+45,2020-04-23,E,Outpatient
+45,2022-03-02,,Emergency
+45,2026-07-06,A,
+45,2027-03-12,I,Emergency
+45,2029-09-10,E,
+46,2022-02-17,A,Telehealth
+46,2024-11-14,F,Urgent Care
+46,2024-11-21,I,Ambulatory
+46,2026-10-19,,Ambulatory
+47,2020-10-13,J,Emergency
+47,2023-06-20,F,Urgent Care
+47,2027-06-10,E,Ambulatory
+47,2027-10-26,,Outpatient
+47,2028-01-25,F,Urgent Care
+48,2024-09-18,C,Ambulatory
+49,2023-05-17,I,
+49,2023-05-29,D,Urgent Care
+49,2024-12-16,I,Urgent Care
+49,2028-10-23,,Urgent Care
+50,2021-08-26,A,Outpatient
+50,2021-11-26,,Ambulatory
+50,2025-04-30,H,
+50,2027-06-12,B,Outpatient
+50,2027-07-18,D,Outpatient
+51,2020-07-24,B,Urgent Care
+51,2022-06-15,I,Urgent Care
+51,2024-06-24,C,Telehealth
+51,2026-06-15,G,
+51,2027-09-17,B,Urgent Care
+52,2028-12-26,,Ambulatory
+53,2021-10-13,H,Emergency
+53,2023-07-23,J,
+53,2025-08-29,I,
+53,2028-06-06,E,Ambulatory
+54,2020-11-13,D,
+54,2023-10-07,I,Inpatient
+54,2027-01-11,E,
+55,2021-09-09,,Telehealth
+56,2027-12-03,,Urgent Care
+57,2022-04-27,,Ambulatory
+57,2023-09-17,G,Inpatient
+57,2027-10-19,J,
+58,2020-01-25,E,Urgent Care
+58,2028-03-28,H,Outpatient
+58,2029-07-27,I,Telehealth
+59,2023-10-08,C,Urgent Care
+59,2024-11-20,A,Urgent Care
+60,2026-12-23,G,Ambulatory
+61,2020-07-24,G,Emergency
+61,2022-05-16,F,Emergency
+61,2024-10-21,H,Outpatient
+61,2027-06-08,B,Telehealth
+62,2023-02-13,E,Inpatient
+62,2023-12-04,B,Telehealth
+62,2025-04-10,I,Inpatient
+65,2022-03-27,J,Outpatient
+66,2021-06-01,B,Ambulatory
+67,2025-03-19,F,Outpatient
+68,2021-03-18,E,Ambulatory
+68,2022-03-23,J,Telehealth
+68,2026-10-23,C,Emergency
+68,2027-08-06,G,Telehealth
+69,2022-09-21,E,Telehealth
+69,2023-11-23,F,Inpatient
+69,2025-09-03,A,Urgent Care
+69,2026-09-25,J,Inpatient
+69,2029-03-22,B,Urgent Care
+70,2021-12-22,J,Ambulatory
+70,2027-02-16,C,Urgent Care
+71,2023-08-13,B,Emergency
+71,2025-03-19,J,Emergency
+71,2029-11-20,D,
+72,2022-05-18,E,
+72,2023-02-19,I,
+72,2025-07-17,C,Urgent Care
+72,2026-11-04,F,Inpatient
+73,2022-02-21,D,Telehealth
+73,2024-07-22,I,Outpatient
+73,2027-09-29,H,Urgent Care
+73,2028-11-21,B,
+74,2024-07-14,E,Telehealth
+75,2022-10-26,,Telehealth
+75,2023-11-09,I,
+75,2023-12-12,E,Emergency
+75,2024-02-20,I,Ambulatory
+76,2023-07-16,I,Telehealth
+77,2022-02-23,H,Emergency
+78,2023-01-28,A,Ambulatory
+78,2023-04-11,H,Inpatient
+78,2023-04-28,,Outpatient
+78,2023-05-23,I,Outpatient
+78,2026-08-11,B,Outpatient
+80,2023-03-10,H,Urgent Care
+80,2023-10-27,A,
+80,2024-06-29,B,Ambulatory
+80,2029-08-30,B,
+81,2021-04-30,J,Ambulatory
+81,2025-01-19,E,Ambulatory
+81,2027-09-12,C,Outpatient
+81,2028-11-12,I,Urgent Care
+81,2029-02-04,B,Outpatient
+82,2021-02-10,D,Emergency
+82,2023-06-04,J,Telehealth
+82,2027-05-29,C,Outpatient
+83,2026-03-10,C,Inpatient
+84,2022-08-06,E,Telehealth
+84,2025-01-19,E,Inpatient
+84,2029-08-21,B,
+85,2022-12-19,G,Inpatient
+86,2020-10-19,C,Emergency
+86,2022-07-09,E,Outpatient
+86,2025-04-03,G,Emergency
+86,2026-09-03,H,Inpatient
+87,2022-07-26,E,
+87,2023-08-13,A,Inpatient
+87,2026-01-20,H,Inpatient
+87,2026-09-15,G,
+89,2025-04-11,E,Outpatient
+90,2023-11-26,F,Emergency
+90,2024-08-13,,Telehealth
+90,2024-11-20,B,Urgent Care
+90,2027-07-07,C,
+91,2023-07-12,F,Inpatient
+91,2028-08-30,I,Inpatient
+91,2029-02-14,,Inpatient
+92,2022-02-07,J,Urgent Care
+92,2022-12-29,E,
+92,2027-01-05,A,Outpatient
+92,2029-09-30,G,
+92,2029-11-16,B,Inpatient
+93,2021-01-16,B,Urgent Care
+93,2021-04-26,,Telehealth
+93,2023-04-10,,Urgent Care
+93,2026-03-06,I,Urgent Care
+93,2026-10-29,C,Emergency
+94,2022-09-25,I,
+94,2024-04-20,,Ambulatory
+94,2028-05-14,B,Emergency
+95,2023-10-24,A,Emergency
+95,2027-05-27,C,Urgent Care
+95,2028-02-21,J,Ambulatory
+96,2024-04-17,G,Inpatient
+96,2025-06-06,,Ambulatory
+96,2028-07-21,H,Emergency
+96,2029-10-01,D,Ambulatory
+97,2027-06-11,H,Inpatient
+97,2028-05-08,G,Urgent Care
+98,2025-08-19,B,Urgent Care
+100,2025-02-14,C,Urgent Care
+100,2027-10-08,B,Emergency
+100,2028-10-06,F,Ambulatory
+100,2029-10-07,,Urgent Care
+101,2021-01-05,B,
+101,2026-12-04,D,Telehealth
+101,2027-09-04,,Telehealth
+101,2028-01-22,I,Inpatient
+101,2029-08-20,F,Telehealth
+102,2023-08-21,E,Emergency
+102,2024-03-15,,Outpatient
+102,2025-12-15,J,Telehealth
+102,2027-10-13,,Inpatient
+102,2029-10-14,,Outpatient
+103,2021-11-27,B,
+104,2021-08-09,H,
+104,2022-11-06,E,Telehealth
+104,2026-12-13,H,Ambulatory
+106,2022-10-21,E,Outpatient
+106,2023-03-24,B,Urgent Care
+106,2023-11-16,G,Telehealth
+107,2024-04-11,,Emergency
+107,2027-11-04,A,Telehealth
+107,2029-07-27,B,
+108,2023-01-29,J,Telehealth
+108,2025-07-27,D,Ambulatory
+108,2028-09-22,J,Telehealth
+109,2022-06-16,J,Emergency
+109,2027-08-08,,Telehealth
+110,2020-06-10,H,
+110,2022-04-02,I,Emergency
+110,2023-04-23,G,
+110,2025-12-14,C,Emergency
+110,2026-07-01,C,Inpatient
+111,2025-04-02,C,Outpatient
+111,2029-01-16,F,
+111,2029-08-24,I,Emergency
+113,2020-02-27,I,Inpatient
+113,2024-04-09,B,
+113,2025-02-05,E,Ambulatory
+114,2025-04-15,J,Ambulatory
+115,2026-11-03,B,Telehealth
+115,2029-03-28,E,Telehealth
+116,2021-04-22,A,Inpatient
+116,2022-08-19,G,Urgent Care
+116,2023-05-31,B,Inpatient
+117,2027-07-09,,Telehealth
+117,2028-02-24,,Telehealth
+119,2024-12-26,F,Inpatient
+119,2026-11-26,E,Inpatient
+119,2027-09-28,D,
+120,2020-07-26,D,Outpatient
+120,2021-01-10,J,Inpatient
+120,2023-02-04,B,Urgent Care
+120,2024-02-13,A,
+120,2028-10-28,B,Ambulatory
+121,2026-07-29,D,
+122,2028-11-04,E,Outpatient
+123,2026-01-21,C,Inpatient
+124,2020-03-05,,Inpatient
+124,2021-06-03,I,Inpatient
+124,2024-01-07,J,Emergency
+124,2028-05-12,H,Urgent Care
+124,2029-09-18,C,Inpatient
+125,2022-06-26,,Emergency
+125,2025-10-03,H,Ambulatory
+126,2021-03-18,H,Inpatient
+126,2027-03-20,A,Urgent Care
+126,2029-07-02,G,
+128,2023-01-31,,Ambulatory
+128,2026-10-27,B,Outpatient
+129,2023-04-22,I,
+129,2024-10-28,B,Telehealth
+129,2027-04-20,G,Urgent Care
+129,2029-12-16,G,Emergency
+130,2021-09-17,B,Inpatient
+130,2024-06-21,B,
+130,2024-10-14,E,Emergency
+133,2020-09-02,B,Urgent Care
+133,2021-01-30,C,Ambulatory
+133,2023-12-19,A,Emergency
+134,2023-07-03,B,Ambulatory
+134,2025-05-29,B,Emergency
+134,2025-09-09,,Telehealth
+134,2029-06-24,B,Emergency
+135,2022-07-15,I,
+135,2023-01-24,F,Emergency
+135,2026-11-18,,Telehealth
+135,2029-04-20,A,
+137,2029-10-02,,Telehealth
+138,2020-10-12,A,Inpatient
+138,2025-02-01,C,Emergency
+138,2028-05-14,G,Urgent Care
+139,2020-12-13,C,Outpatient
+139,2028-02-03,J,
+140,2020-07-22,E,Urgent Care
+140,2024-12-15,E,Outpatient
+140,2027-06-04,,Ambulatory
+140,2028-06-19,F,Urgent Care
+142,2023-06-17,,Urgent Care
+142,2027-08-09,I,Telehealth
+143,2020-08-12,D,Emergency
+143,2022-05-15,E,
+143,2023-09-05,A,Urgent Care
+143,2028-05-17,C,Outpatient
+144,2025-12-21,I,
+144,2029-05-06,B,Urgent Care
+144,2029-08-30,G,Inpatient
+145,2020-11-14,,Urgent Care
+145,2021-04-16,A,Emergency
+145,2026-06-06,G,Emergency
+146,2028-12-26,F,Inpatient
+147,2024-06-09,F,Outpatient
+147,2026-08-09,I,
+147,2029-06-21,D,Urgent Care
+148,2027-02-06,I,
+148,2028-09-26,B,
+149,2028-09-14,F,Telehealth
+150,2021-08-22,D,Outpatient
+150,2026-10-03,B,Outpatient
+150,2028-07-09,J,Telehealth
+150,2028-08-31,H,Ambulatory
+150,2029-02-20,D,Inpatient
+151,2020-08-18,I,
+151,2023-06-25,H,Inpatient
+151,2024-12-06,H,Urgent Care
+151,2027-01-02,F,Outpatient
+151,2027-01-30,E,Ambulatory
+153,2029-04-29,B,
+153,2029-09-09,J,
+154,2024-04-23,J,Ambulatory
+154,2025-05-02,A,Urgent Care
+154,2027-04-23,F,Ambulatory
+154,2028-11-17,H,Ambulatory
+156,2021-12-07,D,Telehealth
+156,2028-01-04,,Telehealth
+157,2023-03-04,G,
+157,2024-12-04,,Emergency
+157,2027-08-12,F,
+158,2021-01-22,E,Emergency
+158,2028-02-12,F,Inpatient
+159,2024-03-22,C,
+159,2027-05-11,C,Ambulatory
+159,2027-06-11,F,
+159,2027-12-13,,Ambulatory
+160,2020-11-12,B,
+160,2022-01-08,F,Urgent Care
+160,2022-02-25,C,Outpatient
+160,2024-01-22,F,Emergency
+160,2029-04-18,,Ambulatory
+161,2021-06-20,C,Outpatient
+161,2022-01-10,,Inpatient
+161,2024-08-09,D,Urgent Care
+161,2029-05-13,F,Ambulatory
+162,2022-09-06,H,Outpatient
+162,2023-03-13,D,Ambulatory
+162,2024-02-15,H,Emergency
+162,2028-09-22,I,Ambulatory
+163,2021-10-25,J,Outpatient
+163,2025-05-22,,Inpatient
+163,2029-10-15,A,Telehealth
+164,2022-06-28,F,Inpatient
+164,2024-08-26,,Ambulatory
+164,2025-10-03,G,Inpatient
+164,2028-07-22,E,Urgent Care
+164,2029-06-26,E,Inpatient
+165,2022-07-08,F,Inpatient
+165,2022-08-23,B,Emergency
+166,2020-06-05,,Telehealth
+166,2022-11-14,C,Ambulatory
+166,2026-11-25,B,Inpatient
+166,2027-04-16,,Outpatient
+166,2029-04-27,,Urgent Care
+167,2020-09-14,H,Ambulatory
+167,2022-08-31,B,
+167,2022-09-03,J,Urgent Care
+167,2026-01-04,I,
+167,2026-10-29,B,Emergency
+168,2028-01-22,E,
+170,2020-06-27,F,Emergency
+170,2020-10-04,G,Urgent Care
+170,2022-02-06,I,Emergency
+170,2023-12-16,,Urgent Care
+171,2020-03-07,B,Emergency
+171,2022-09-14,J,Telehealth
+171,2023-12-14,C,Telehealth
+171,2025-03-18,,Outpatient
+171,2028-06-26,C,Inpatient
+173,2022-04-05,D,Inpatient
+173,2023-07-16,I,Urgent Care
+173,2028-06-12,E,Emergency
+173,2028-09-14,A,Emergency
+173,2029-02-21,E,
+175,2023-09-21,,Emergency
+175,2023-10-20,H,Telehealth
+175,2024-11-24,H,
+175,2025-07-30,I,Emergency
+175,2028-12-25,G,Inpatient
+176,2023-08-08,B,
+176,2026-10-03,I,
+176,2027-05-31,E,
+177,2023-01-29,B,Telehealth
+177,2024-12-23,H,Inpatient
+177,2028-01-18,C,Telehealth
+177,2028-02-25,J,Urgent Care
+178,2020-10-02,F,
+178,2024-04-17,J,Outpatient
+178,2024-07-21,I,Telehealth
+178,2027-08-14,A,Outpatient
+178,2029-07-08,A,
+179,2020-04-16,H,Ambulatory
+179,2025-01-16,F,
+179,2025-12-08,G,Emergency
+179,2027-04-14,D,
+179,2028-07-22,J,Outpatient
+180,2023-03-15,D,Inpatient
+180,2026-04-19,E,Emergency
+180,2027-11-23,D,Ambulatory
+181,2029-07-25,H,Outpatient
+182,2022-07-07,D,Outpatient
+182,2023-04-04,C,
+182,2023-11-24,I,Ambulatory
+182,2024-12-28,,Telehealth
+182,2027-12-16,F,Ambulatory
+183,2028-11-11,A,Emergency
+184,2021-06-15,B,Emergency
+184,2024-06-18,I,Urgent Care
+184,2026-06-02,H,Ambulatory
+184,2028-08-16,J,Inpatient
+185,2023-07-22,H,Urgent Care
+186,2021-09-18,C,
+186,2023-08-14,F,Ambulatory
+186,2025-08-21,B,Ambulatory
+186,2025-10-20,C,Ambulatory
+186,2027-03-05,,Urgent Care
+187,2027-02-14,C,Telehealth
+187,2029-06-26,E,Outpatient
+188,2021-11-21,C,Telehealth
+188,2026-11-21,I,Telehealth
+189,2024-09-02,H,Telehealth
+189,2027-03-12,D,
+189,2028-01-30,J,Inpatient
+189,2029-04-03,,Inpatient
+190,2020-10-25,C,Urgent Care
+190,2023-04-01,H,Outpatient
+190,2024-08-29,H,Outpatient
+190,2029-01-09,E,Urgent Care
+191,2023-07-31,G,
+191,2026-10-20,F,Telehealth
+192,2025-03-25,E,Urgent Care
+192,2025-10-10,F,Outpatient
+193,2021-07-31,A,Emergency
+194,2023-07-04,C,Urgent Care
+194,2029-02-14,J,Telehealth
+194,2029-09-09,D,Outpatient
+195,2020-04-04,G,Ambulatory
+195,2023-12-16,A,Emergency
+195,2025-02-15,D,Ambulatory
+195,2025-03-27,E,Urgent Care
+196,2020-02-03,G,
+196,2026-09-13,E,
+196,2029-11-23,F,
+197,2020-07-04,A,Ambulatory
+197,2026-04-20,F,Ambulatory
+198,2020-10-28,I,Urgent Care
+198,2028-07-27,J,
+199,2021-05-01,B,Urgent Care
+199,2024-03-08,,Emergency
+199,2025-09-16,I,
+199,2028-06-19,D,Ambulatory
+202,2028-01-01,H,
+203,2021-09-02,F,Ambulatory
+203,2023-07-28,G,
+203,2028-04-16,J,Emergency
+204,2023-06-14,,Urgent Care
+204,2025-04-29,F,Emergency
+204,2027-07-22,G,Ambulatory
+204,2029-04-15,J,Emergency
+205,2025-05-21,I,Telehealth
+205,2027-05-09,A,
+206,2021-03-26,A,Urgent Care
+206,2022-09-19,,Telehealth
+206,2023-07-08,C,Urgent Care
+206,2026-12-13,C,Telehealth
+206,2027-09-29,G,Ambulatory
+207,2022-04-29,H,Ambulatory
+207,2024-03-23,C,Urgent Care
+207,2025-04-15,C,Ambulatory
+207,2025-12-23,I,Emergency
+208,2022-02-26,E,Ambulatory
+208,2023-05-07,,Emergency
+208,2025-05-19,I,Telehealth
+208,2027-11-27,,Emergency
+208,2028-08-28,J,Urgent Care
+209,2023-03-24,J,
+209,2026-02-02,G,Emergency
+210,2023-04-04,E,Telehealth
+212,2022-04-07,I,Telehealth
+212,2024-12-16,H,Outpatient
+213,2021-07-16,J,Telehealth
+213,2026-07-31,D,Inpatient
+214,2021-02-14,F,Telehealth
+214,2025-04-18,C,Inpatient
+214,2025-12-15,D,Inpatient
+214,2026-03-04,G,
+214,2029-11-16,H,Telehealth
+215,2028-06-23,F,Emergency
+216,2020-08-30,J,Outpatient
+216,2025-12-31,C,
+216,2028-11-01,C,
+216,2029-10-12,,Inpatient
+216,2029-11-22,A,Urgent Care
+217,2025-02-04,C,Ambulatory
+217,2026-05-15,F,Emergency
+218,2021-10-27,,Telehealth
+218,2022-02-01,F,Emergency
+218,2023-01-22,B,Emergency
+219,2021-01-25,C,Urgent Care
+219,2023-09-05,G,
+219,2027-07-25,C,Ambulatory
+219,2029-08-07,G,Ambulatory
+220,2022-08-22,E,Emergency
+220,2022-10-13,E,Urgent Care
+221,2024-01-12,,Telehealth
+221,2026-07-13,E,
+223,2023-04-23,J,Outpatient
+223,2023-06-10,,Telehealth
+223,2025-08-20,B,Telehealth
+224,2021-07-01,C,
+225,2025-12-03,B,Ambulatory
+225,2026-02-27,,Telehealth
+225,2026-10-17,G,Telehealth
+225,2028-06-18,,Urgent Care
+225,2029-04-04,D,Telehealth
+228,2021-09-05,F,Ambulatory
+228,2024-12-14,D,Telehealth
+228,2025-09-01,J,Ambulatory
+228,2026-07-16,B,Ambulatory
+229,2020-08-24,E,Telehealth
+229,2025-10-03,H,
+229,2029-01-25,H,Outpatient
+231,2020-10-26,,Emergency
+231,2022-11-08,D,
+231,2027-11-08,,Inpatient
+233,2020-05-09,,Outpatient
+233,2028-08-15,G,Emergency
+233,2029-12-29,H,
+234,2020-11-24,F,Inpatient
+234,2022-01-01,I,Outpatient
+234,2028-02-29,A,Inpatient
+235,2025-03-11,I,Urgent Care
+235,2029-03-26,D,Urgent Care
+236,2021-09-27,D,Telehealth
+236,2028-08-01,A,Telehealth
+237,2020-10-02,J,Inpatient
+237,2025-01-02,D,Telehealth
+237,2026-11-23,D,
+239,2023-03-30,J,Emergency
+239,2024-12-02,I,Outpatient
+239,2028-06-16,C,
+240,2024-08-20,E,
+240,2026-03-30,G,Ambulatory
+240,2026-09-15,,Emergency
+240,2029-10-29,I,Outpatient
+241,2020-07-11,G,Ambulatory
+241,2023-05-13,C,Ambulatory
+241,2023-07-29,,Outpatient
+242,2021-08-14,A,Ambulatory
+242,2022-09-14,E,Telehealth
+242,2024-08-17,I,Ambulatory
+243,2024-05-09,E,Outpatient
+244,2021-01-13,A,Emergency
+244,2027-04-02,H,Emergency
+245,2027-07-22,,Outpatient
+245,2029-01-08,,Outpatient
+245,2029-10-01,E,Inpatient
+246,2022-02-17,,Outpatient
+247,2024-01-13,H,Inpatient
+247,2025-03-24,E,Emergency
+247,2026-03-11,E,Urgent Care
+247,2026-10-11,G,Outpatient
+247,2029-01-01,F,Outpatient
+248,2023-07-05,A,Ambulatory
+248,2029-09-09,C,Inpatient
+249,2022-03-14,D,
+249,2026-03-16,E,Outpatient
+250,2027-05-05,E,Urgent Care
+250,2028-02-11,H,
+250,2028-03-20,C,Outpatient
+250,2029-05-06,H,Ambulatory
+251,2024-08-16,D,Inpatient
+251,2026-02-16,C,Ambulatory
+251,2027-03-13,I,Inpatient
+251,2027-12-06,A,Outpatient
+251,2029-05-29,A,
+252,2020-01-28,A,Inpatient
+252,2025-02-10,A,Ambulatory
+252,2025-12-08,I,Emergency
+252,2027-02-25,,Inpatient
+254,2021-01-29,D,
+254,2026-12-13,F,Emergency
+254,2028-11-30,B,Emergency
+254,2029-02-12,C,Inpatient
+255,2024-07-18,G,Ambulatory
+255,2025-02-23,,Emergency
+255,2027-09-02,A,Inpatient
+256,2020-08-17,C,Inpatient
+256,2025-08-09,F,
+256,2029-08-15,I,Inpatient
+257,2022-05-15,E,Inpatient
+259,2020-03-05,J,Outpatient
+259,2021-10-27,J,Urgent Care
+259,2023-02-22,C,
+259,2027-08-05,,Telehealth
+259,2028-06-08,B,Emergency
+260,2028-11-11,I,Telehealth
+261,2020-08-07,G,Outpatient
+261,2029-05-28,F,Ambulatory
+262,2022-07-23,I,Urgent Care
+262,2024-11-03,J,Telehealth
+262,2026-09-05,F,Inpatient
+262,2027-02-10,H,
+263,2020-10-28,E,Outpatient
+263,2020-12-17,D,
+263,2024-04-05,,Emergency
+264,2021-03-12,A,Emergency
+264,2024-12-26,E,Inpatient
+265,2020-12-23,G,Urgent Care
+266,2021-01-02,I,
+266,2023-04-10,G,Inpatient
+266,2026-03-22,B,Inpatient
+266,2026-09-11,G,Inpatient
+267,2021-08-20,C,Urgent Care
+267,2021-11-25,C,Outpatient
+267,2023-01-06,,Urgent Care
+267,2023-02-04,E,Urgent Care
+267,2026-04-10,J,Ambulatory
+269,2022-10-27,H,
+269,2026-11-30,H,Inpatient
+270,2023-06-01,G,Emergency
+271,2021-12-28,,Emergency
+271,2024-04-05,H,
+271,2024-10-29,E,Emergency
+271,2026-10-06,H,Emergency
+272,2023-08-27,,Urgent Care
+272,2024-02-04,J,Outpatient
+272,2026-08-22,I,Inpatient
+272,2027-10-17,J,
+272,2028-02-26,D,Urgent Care
+273,2025-08-07,E,Outpatient
+273,2029-04-27,G,
+274,2020-10-29,J,Urgent Care
+274,2027-05-21,G,Urgent Care
+275,2024-06-29,I,Inpatient
+275,2027-02-26,B,
+275,2027-05-17,C,Telehealth
+275,2028-11-12,,Ambulatory
+276,2020-06-30,F,Urgent Care
+276,2021-03-09,B,Emergency
+276,2022-06-28,H,Emergency
+276,2024-05-21,,Telehealth
+277,2021-03-04,G,Inpatient
+277,2021-04-20,F,
+277,2021-09-09,A,
+277,2023-11-06,D,Ambulatory
+278,2023-05-14,,Inpatient
+278,2023-11-27,B,Urgent Care
+278,2028-02-05,,Inpatient
+279,2022-09-26,I,Outpatient
+279,2027-04-08,C,Telehealth
+280,2026-04-12,H,Outpatient
+280,2028-12-11,C,Outpatient
+281,2022-05-29,E,
+281,2024-10-25,A,Telehealth
+281,2027-05-16,G,Inpatient
+281,2028-04-08,,Ambulatory
+281,2029-01-25,,Inpatient
+282,2022-02-04,F,Outpatient
+282,2023-07-07,J,
+282,2025-02-17,,Telehealth
+282,2029-09-03,I,Telehealth
+283,2021-04-12,,Urgent Care
+283,2021-04-27,E,Inpatient
+283,2026-08-14,C,Emergency
+283,2026-12-03,E,Ambulatory
+284,2024-03-09,I,Urgent Care
+285,2024-09-28,H,Telehealth
+285,2026-01-10,I,
+285,2026-09-08,J,Urgent Care
+286,2023-03-29,C,Emergency
+286,2029-06-10,J,Inpatient
+286,2029-09-15,A,Urgent Care
+287,2022-03-10,I,Ambulatory
+288,2020-05-13,,Ambulatory
+288,2020-12-04,D,
+288,2023-03-28,H,Ambulatory
+288,2025-07-20,H,
+288,2027-12-18,H,Outpatient
+289,2021-04-08,E,Ambulatory
+289,2024-10-07,D,Emergency
+289,2028-07-09,I,Outpatient
+289,2028-08-30,I,Ambulatory
+289,2029-03-26,I,
+291,2022-12-12,B,Urgent Care
+291,2029-02-02,J,Telehealth
+291,2029-09-14,,Outpatient
+292,2021-11-10,D,Outpatient
+292,2025-12-20,J,
+292,2029-01-12,J,Emergency
+293,2023-08-18,E,
+294,2020-08-30,C,Telehealth
+294,2029-08-15,C,
+295,2022-10-19,F,
+296,2024-05-27,C,Ambulatory
+296,2025-01-25,B,Urgent Care
+296,2025-06-22,,Inpatient
+296,2025-10-12,F,Urgent Care
+296,2027-02-03,G,Urgent Care
+297,2021-01-16,F,
+297,2023-08-15,F,Ambulatory
+297,2026-06-25,J,Urgent Care
+297,2028-12-03,,Urgent Care
+297,2029-04-01,H,Emergency
+298,2027-01-08,A,Inpatient
+298,2027-08-27,A,Inpatient
+299,2024-12-12,A,
+300,2027-09-21,E,Outpatient
+301,2021-01-17,,Inpatient
+301,2024-03-03,A,Urgent Care
+302,2021-01-08,A,Outpatient
+302,2022-07-15,A,
+302,2023-06-05,G,Telehealth
+302,2025-05-07,C,
+302,2027-10-20,B,
+303,2021-06-25,B,Outpatient
+303,2023-07-07,E,Outpatient
+303,2024-04-16,C,Inpatient
+303,2024-04-18,B,Inpatient
+303,2025-12-12,J,Telehealth
+304,2024-12-07,,Telehealth
+305,2021-07-27,J,Telehealth
+305,2021-09-12,,Telehealth
+305,2024-04-21,G,Emergency
+305,2024-12-17,B,
+305,2028-11-14,D,Emergency
+306,2020-12-11,I,Ambulatory
+306,2026-09-23,,Telehealth
+306,2026-10-21,G,Emergency
+306,2027-03-31,D,Urgent Care
+306,2029-10-27,D,Ambulatory
+307,2021-04-06,H,Telehealth
+307,2024-01-19,C,Urgent Care
+307,2026-08-29,I,
+308,2021-12-08,B,Inpatient
+308,2022-06-02,,Urgent Care
+308,2024-09-19,I,Telehealth
+308,2026-08-02,,Emergency
+309,2023-03-19,G,Telehealth
+309,2023-06-23,I,
+309,2024-07-05,I,Ambulatory
+309,2026-11-28,E,Inpatient
+310,2026-01-06,G,Ambulatory
+311,2020-12-19,B,
+311,2024-11-26,A,Outpatient
+311,2026-11-12,E,Telehealth
+311,2028-04-25,B,Inpatient
+311,2028-07-23,E,Telehealth
+312,2020-09-18,J,Telehealth
+312,2021-06-03,B,Inpatient
+312,2021-07-16,,Urgent Care
+312,2023-10-04,E,Ambulatory
+312,2023-11-21,C,Emergency
+314,2022-11-10,J,Telehealth
+314,2025-02-07,A,Urgent Care
+314,2029-08-20,F,Outpatient
+315,2020-06-29,,Inpatient
+315,2021-04-17,I,Inpatient
+315,2022-01-03,I,Telehealth
+315,2025-04-16,G,Outpatient
+315,2028-04-21,D,
+316,2024-08-31,,Inpatient
+317,2020-07-07,,Urgent Care
+317,2020-08-03,,Ambulatory
+317,2024-03-07,I,Telehealth
+317,2029-09-17,E,Emergency
+319,2023-04-09,J,Outpatient
+319,2025-02-13,,Outpatient
+319,2025-03-15,J,Urgent Care
+319,2028-08-30,I,Outpatient
+320,2020-01-27,A,Outpatient
+321,2020-09-02,E,Inpatient
+321,2022-04-20,G,Urgent Care
+321,2023-11-19,,Inpatient
+321,2028-07-05,E,
+323,2029-06-25,F,Urgent Care
+324,2020-12-13,I,
+324,2021-06-19,E,Emergency
+324,2026-05-14,G,Telehealth
+324,2027-02-23,B,Ambulatory
+324,2029-07-17,,Telehealth
+325,2021-11-04,H,Emergency
+325,2022-08-14,,Outpatient
+325,2023-08-29,H,Emergency
+325,2024-07-23,,Emergency
+325,2028-09-29,C,
+326,2025-01-25,H,
+329,2029-01-20,J,Inpatient
+330,2029-05-16,C,Inpatient
+331,2020-05-07,H,Ambulatory
+331,2020-07-19,E,Outpatient
+331,2021-02-21,B,Inpatient
+331,2022-10-13,G,Ambulatory
+331,2028-05-22,B,Urgent Care
+333,2021-06-19,G,
+334,2022-03-20,C,Inpatient
+334,2022-11-26,A,
+334,2025-03-03,C,Ambulatory
+334,2027-01-25,J,Ambulatory
+334,2029-07-02,B,Inpatient
+335,2022-05-29,,Emergency
+335,2024-04-16,C,Emergency
+335,2029-03-19,H,Inpatient
+336,2024-08-14,A,Inpatient
+336,2026-12-11,E,Urgent Care
+336,2029-11-27,A,Ambulatory
+337,2024-04-17,G,Outpatient
+337,2027-03-17,I,
+338,2025-08-19,G,Emergency
+338,2028-10-05,,Ambulatory
+338,2028-10-07,H,Ambulatory
+339,2020-04-16,J,Outpatient
+341,2020-08-27,I,
+341,2028-08-06,C,Inpatient
+342,2027-05-14,,Ambulatory
+343,2020-04-25,J,Ambulatory
+343,2020-08-17,J,Urgent Care
+343,2021-08-05,H,Ambulatory
+343,2023-12-24,C,Outpatient
+343,2026-08-23,F,
+344,2020-08-18,J,Outpatient
+344,2021-12-20,A,Inpatient
+346,2021-08-28,B,Ambulatory
+346,2021-12-27,A,Inpatient
+346,2022-04-05,F,
+346,2025-05-11,F,Ambulatory
+347,2020-10-24,,Ambulatory
+347,2021-02-17,,Emergency
+348,2021-10-07,H,Telehealth
+349,2021-12-14,D,Telehealth
+349,2026-08-09,G,
+350,2023-07-27,,Inpatient
+350,2025-07-25,F,Telehealth
+350,2027-09-21,C,Outpatient
+350,2028-03-04,J,Urgent Care
+350,2029-07-16,,Ambulatory
+352,2023-11-21,C,Telehealth
+354,2020-10-04,E,
+354,2022-12-22,D,Telehealth
+354,2024-11-29,C,Urgent Care
+354,2027-07-07,H,Inpatient
+354,2028-01-29,A,Urgent Care
+355,2024-03-17,,Ambulatory
+355,2027-04-20,,Urgent Care
+355,2029-11-20,F,Ambulatory
+358,2020-03-23,E,
+358,2020-10-30,C,
+359,2028-03-17,I,Inpatient
+360,2026-08-30,A,
+360,2027-05-01,J,Urgent Care
+361,2020-08-07,F,Outpatient
+362,2024-08-03,E,Emergency
+363,2021-01-27,G,Ambulatory
+364,2020-04-15,C,Telehealth
+364,2023-04-21,D,Inpatient
+364,2024-01-17,,Inpatient
+364,2029-06-02,C,Inpatient
+365,2020-12-01,B,Emergency
+365,2028-10-19,H,Urgent Care
+366,2022-01-27,G,Emergency
+366,2022-02-03,,Emergency
+366,2022-12-21,,Urgent Care
+366,2024-12-06,E,Outpatient
+366,2029-05-21,J,Inpatient
+367,2028-06-08,B,
+368,2026-03-17,G,
+368,2029-01-23,,Outpatient
+369,2025-05-04,,Urgent Care
+369,2026-01-02,,Outpatient
+369,2029-07-29,I,Ambulatory
+370,2021-05-31,G,Inpatient
+370,2021-12-09,D,Outpatient
+370,2027-08-30,D,Telehealth
+370,2028-12-22,B,Urgent Care
+371,2029-05-09,F,Telehealth
+374,2026-03-28,,Emergency
+374,2029-08-09,I,Urgent Care
+374,2029-10-17,J,Ambulatory
+375,2021-09-04,J,Ambulatory
+375,2026-07-14,B,Ambulatory
+375,2028-09-28,E,Ambulatory
+375,2028-10-06,B,Urgent Care
+376,2027-05-06,J,Ambulatory
+376,2029-11-04,E,Urgent Care
+377,2020-06-02,,Urgent Care
+377,2021-08-12,,Urgent Care
+377,2029-12-22,D,Inpatient
+378,2021-07-04,H,Emergency
+378,2023-01-08,J,Telehealth
+378,2023-10-15,,Emergency
+378,2025-04-30,F,
+378,2029-06-14,B,Outpatient
+380,2024-12-14,G,Telehealth
+381,2027-12-16,,Ambulatory
+381,2028-07-07,A,Ambulatory
+381,2028-11-15,B,Emergency
+382,2020-04-28,,Outpatient
+382,2022-03-26,,Urgent Care
+382,2025-02-12,F,Telehealth
+382,2029-05-21,D,Inpatient
+383,2021-12-28,J,Ambulatory
+383,2023-12-03,C,Emergency
+383,2024-03-05,J,Urgent Care
+383,2024-06-13,A,Outpatient
+384,2022-07-11,E,Telehealth
+384,2024-05-02,C,Ambulatory
+384,2024-08-04,A,Urgent Care
+384,2028-09-29,D,Telehealth
+384,2029-04-26,E,Inpatient
+385,2027-04-05,J,Inpatient
+386,2022-10-30,E,Urgent Care
+387,2022-06-12,E,Telehealth
+387,2025-11-02,J,
+387,2029-07-20,H,Emergency
+389,2021-03-18,B,Emergency
+389,2023-02-06,E,
+389,2026-08-29,,Telehealth
+389,2027-06-06,I,Telehealth
+390,2020-04-14,,Emergency
+390,2024-07-13,C,Telehealth
+390,2024-09-10,G,Telehealth
+390,2025-10-19,A,Ambulatory
+390,2027-12-22,D,Outpatient
+392,2023-05-14,I,Outpatient
+392,2027-12-10,F,Telehealth
+392,2027-12-31,I,
+392,2028-10-19,,Ambulatory
+393,2021-02-03,,Telehealth
+393,2022-11-25,F,Telehealth
+395,2023-12-26,E,Urgent Care
+396,2024-03-02,J,Emergency
+396,2025-03-14,,Inpatient
+397,2021-07-16,F,Urgent Care
+397,2023-05-07,A,
+397,2025-08-11,G,
+397,2026-05-21,C,Emergency
+397,2026-07-18,H,
+398,2020-08-25,H,Emergency
+398,2022-01-08,H,
+398,2022-05-07,J,Outpatient
+398,2025-06-28,C,Ambulatory
+398,2027-01-28,F,Telehealth
+399,2025-05-09,A,Inpatient
+399,2025-12-26,F,Inpatient
+399,2027-02-07,G,Urgent Care
+400,2020-01-17,D,Telehealth
+400,2028-06-27,A,Telehealth
+401,2023-07-02,B,Urgent Care
+401,2025-08-23,C,Inpatient
+403,2023-04-06,I,Ambulatory
+403,2025-11-16,G,Telehealth
+404,2023-11-04,F,Outpatient
+405,2029-02-07,A,Outpatient
+406,2028-02-26,D,Telehealth
+408,2022-11-13,J,
+408,2025-08-28,B,Emergency
+408,2027-06-04,A,Inpatient
+408,2027-12-22,G,Telehealth
+409,2021-04-19,H,Urgent Care
+409,2021-05-21,H,Telehealth
+409,2021-09-19,A,Emergency
+409,2024-09-19,I,Emergency
+409,2026-12-25,G,Inpatient
+410,2022-04-06,,Emergency
+410,2026-10-30,E,Ambulatory
+410,2028-01-23,,Inpatient
+410,2028-10-19,H,Outpatient
+411,2020-06-10,,Telehealth
+412,2023-09-16,,Inpatient
+412,2027-07-03,C,
+412,2027-07-14,B,
+413,2020-11-03,E,Telehealth
+413,2022-08-04,,Emergency
+413,2025-03-16,B,Outpatient
+413,2029-10-20,E,Emergency
+414,2023-07-04,B,
+414,2024-11-27,B,Emergency
+414,2027-06-10,F,Emergency
+414,2029-02-20,C,Inpatient
+414,2029-07-18,,Outpatient
+415,2024-06-27,E,Urgent Care
+415,2027-09-26,G,Telehealth
+415,2029-12-08,,Outpatient
+416,2024-08-31,,Telehealth
+416,2024-11-29,J,Urgent Care
+416,2028-02-23,C,Inpatient
+416,2028-09-26,J,Inpatient
+416,2029-09-03,H,Urgent Care
+418,2024-12-10,B,Emergency
+418,2027-05-06,A,Telehealth
+418,2029-09-26,F,Ambulatory
+419,2026-11-15,A,Telehealth
+419,2027-06-11,C,Ambulatory
+419,2027-09-20,G,Telehealth
+419,2028-02-24,H,Emergency
+420,2025-09-01,,Outpatient
+422,2020-07-25,I,Telehealth
+422,2023-08-06,F,Emergency
+422,2024-03-30,D,Inpatient
+423,2024-12-24,B,Urgent Care
+423,2025-01-05,B,Urgent Care
+423,2028-05-10,,Urgent Care
+424,2020-05-26,B,
+424,2022-04-27,F,Emergency
+424,2026-12-10,I,Ambulatory
+426,2029-06-20,F,Ambulatory
+427,2022-06-27,F,
+427,2025-01-27,B,Telehealth
+427,2026-09-23,F,
+427,2029-04-22,I,Ambulatory
+428,2025-07-09,G,Inpatient
+428,2027-11-15,A,Outpatient
+429,2026-11-07,D,
+429,2029-07-22,D,Urgent Care
+430,2028-01-14,B,Urgent Care
+432,2025-12-12,I,Urgent Care
+432,2027-05-21,H,Inpatient
+432,2027-10-04,C,Inpatient
+432,2029-05-23,H,
+432,2029-05-28,,Outpatient
+433,2023-11-05,H,Outpatient
+433,2024-09-10,E,Urgent Care
+433,2027-05-17,I,Urgent Care
+434,2024-08-17,I,Emergency
+435,2021-06-27,I,Ambulatory
+435,2026-04-22,,Ambulatory
+435,2026-12-31,F,Telehealth
+435,2027-10-14,B,Emergency
+435,2028-04-06,D,Outpatient
+436,2020-08-05,D,Emergency
+436,2021-03-12,G,Outpatient
+436,2027-12-18,I,Emergency
+436,2028-05-30,E,Telehealth
+436,2029-11-03,A,Ambulatory
+437,2021-08-22,E,
+437,2028-06-13,F,Urgent Care
+439,2020-08-08,E,Outpatient
+439,2022-08-31,A,Urgent Care
+439,2024-05-06,F,Ambulatory
+439,2029-09-25,I,Urgent Care
+440,2025-01-12,B,Outpatient
+440,2027-11-26,J,Ambulatory
+440,2028-04-12,D,
+440,2029-09-28,D,
+441,2028-03-29,,Inpatient
+442,2023-02-17,C,Outpatient
+442,2025-03-25,A,Outpatient
+442,2026-07-20,A,Emergency
+443,2023-05-18,J,Ambulatory
+443,2026-09-10,J,Telehealth
+444,2020-10-25,I,Outpatient
+444,2022-01-23,I,Outpatient
+445,2022-06-25,F,Emergency
+445,2024-01-17,D,Ambulatory
+445,2026-02-02,B,Emergency
+446,2023-11-18,D,Telehealth
+446,2025-04-29,B,Telehealth
+446,2026-11-18,A,Telehealth
+446,2029-12-06,G,Inpatient
+447,2022-11-16,A,Ambulatory
+447,2024-12-30,A,Emergency
+447,2029-03-21,I,
+448,2020-01-31,D,Telehealth
+448,2021-01-28,,Ambulatory
+448,2022-02-27,I,Inpatient
+448,2022-04-22,B,Telehealth
+448,2027-01-22,G,
+449,2020-08-10,E,Ambulatory
+449,2020-10-15,E,Urgent Care
+449,2021-09-21,H,
+449,2023-09-20,B,Inpatient
+449,2024-05-08,,Urgent Care
+450,2020-01-25,J,Inpatient
+450,2020-03-10,B,Ambulatory
+451,2020-12-20,H,Urgent Care
+451,2021-03-10,E,
+451,2024-06-06,H,Outpatient
+451,2025-12-25,,Telehealth
+451,2029-07-06,F,Ambulatory
+452,2027-08-06,,Ambulatory
+452,2028-12-07,C,Emergency
+452,2029-10-23,,Inpatient
+454,2020-12-14,D,Telehealth
+454,2026-09-09,I,Ambulatory
+454,2027-03-30,C,Outpatient
+454,2028-04-24,,Urgent Care
+455,2026-12-01,D,Inpatient
+456,2027-07-11,I,Urgent Care
+457,2020-10-02,B,Outpatient
+457,2021-06-09,B,Emergency
+457,2026-03-01,E,Telehealth
+457,2026-12-12,D,Emergency
+457,2028-02-20,F,
+458,2023-06-06,J,Ambulatory
+458,2024-02-01,G,Outpatient
+458,2025-01-19,J,Telehealth
+460,2022-10-05,G,Emergency
+460,2029-06-03,C,Telehealth
+461,2021-03-21,J,Inpatient
+461,2022-03-15,B,Telehealth
+461,2023-09-20,H,Urgent Care
+461,2024-01-09,H,Ambulatory
+461,2029-06-09,C,
+464,2022-12-03,C,Emergency
+464,2024-05-26,,Telehealth
+464,2024-07-17,A,
+464,2027-01-31,J,Ambulatory
+465,2021-01-05,F,Ambulatory
+465,2021-07-02,I,Ambulatory
+467,2020-06-14,,Outpatient
+467,2020-09-14,F,Outpatient
+467,2022-09-05,,Outpatient
+467,2025-01-01,C,Ambulatory
+467,2026-05-06,H,Emergency
+469,2022-04-26,,Urgent Care
+469,2023-08-20,I,Telehealth
+469,2025-02-05,,Telehealth
+469,2026-02-07,G,
+469,2029-04-21,E,
+470,2023-12-16,,Urgent Care
+470,2024-02-05,I,Emergency
+470,2024-03-21,,Urgent Care
+471,2020-01-28,H,Outpatient
+471,2021-10-06,J,Telehealth
+471,2022-07-31,,Telehealth
+471,2023-02-24,C,Outpatient
+473,2021-04-09,,Urgent Care
+473,2022-05-13,G,
+473,2022-08-01,F,Telehealth
+473,2022-09-25,C,
+473,2026-08-23,,Telehealth
+474,2020-06-09,A,
+474,2022-06-06,J,Urgent Care
+474,2022-11-23,I,Urgent Care
+474,2026-09-20,E,Inpatient
+475,2021-08-07,J,Telehealth
+475,2021-11-29,G,Ambulatory
+475,2025-09-23,C,Telehealth
+476,2020-10-08,G,Urgent Care
+476,2021-01-29,H,Ambulatory
+476,2021-06-25,,Outpatient
+476,2023-11-04,J,
+476,2025-11-11,,Ambulatory
+477,2020-06-08,B,
+477,2024-09-19,A,Telehealth
+477,2027-05-24,J,Ambulatory
+477,2029-04-12,,Ambulatory
+478,2022-11-08,D,Inpatient
+478,2023-03-06,E,
+478,2023-12-06,G,Outpatient
+478,2024-10-23,H,Urgent Care
+480,2021-03-12,,Telehealth
+480,2021-04-27,G,Telehealth
+480,2022-04-21,G,Emergency
+480,2026-07-25,E,Ambulatory
+480,2028-05-03,J,Ambulatory
+481,2026-03-11,,Emergency
+481,2026-05-01,J,Emergency
+481,2027-08-19,D,Urgent Care
+482,2021-07-19,,Urgent Care
+482,2026-03-22,E,Emergency
+482,2026-06-24,G,Telehealth
+482,2028-10-12,B,Outpatient
+483,2024-06-28,I,
+483,2025-04-15,B,Inpatient
+483,2027-02-17,B,Outpatient
+483,2027-10-26,,Urgent Care
+484,2020-06-03,G,Ambulatory
+484,2022-06-27,B,Ambulatory
+485,2020-02-13,I,Emergency
+485,2022-03-08,J,Ambulatory
+485,2025-10-13,,Outpatient
+485,2025-11-04,,Inpatient
+485,2028-09-03,H,Urgent Care
+486,2020-01-02,B,Emergency
+486,2020-05-27,D,Telehealth
+486,2024-06-06,J,Outpatient
+486,2025-10-21,B,Inpatient
+486,2028-09-28,F,Telehealth
+487,2022-07-15,H,
+487,2023-03-11,F,
+487,2024-07-25,,Inpatient
+487,2026-06-12,E,Outpatient
+488,2022-11-21,H,Urgent Care
+488,2023-04-20,B,Ambulatory
+488,2026-04-25,D,Emergency
+488,2028-09-11,H,Ambulatory
+490,2021-04-21,B,Urgent Care
+490,2024-08-16,I,Ambulatory
+490,2027-02-08,D,Emergency
+492,2021-01-15,F,Inpatient
+492,2022-01-18,,Telehealth
+492,2023-12-19,J,Emergency
+492,2026-03-21,,Emergency
+492,2029-05-01,D,Emergency
+493,2022-08-19,E,Outpatient
+494,2022-04-10,,Emergency
+495,2028-09-25,,Inpatient
+496,2026-12-17,H,Ambulatory
+496,2027-06-10,J,
+496,2028-07-27,H,
+496,2028-07-27,G,Outpatient
+496,2029-09-28,H,Outpatient
+497,2021-06-09,I,Urgent Care
+497,2024-05-31,H,Inpatient
+497,2025-05-13,I,
+497,2027-10-31,F,Telehealth
+500,2022-02-05,D,Emergency
+500,2022-05-13,J,Inpatient
+500,2023-08-25,J,Emergency
+500,2025-04-14,F,
+500,2025-08-04,D,Urgent Care

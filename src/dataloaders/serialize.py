@@ -213,15 +213,15 @@ class Serializer(Generic[T]):
 
 
 @dataclass
-class ParquetSerializer(Serializer[dd.DataFrame]):
+class ParquetSerializer(Serializer[dd.core.DataFrame]):
 
     verify_index: bool = True
     on_validation_error: Literal["error", "recompute"] = "error"
     parquet_kwargs: Dict[str, Any] = field(default_factory=lambda: {})
 
     def load_result(
-        self, f: Callable[..., dd.DataFrame], ba: BoundArguments
-    ) -> dd.DataFrame:
+        self, f: Callable[..., dd.core.DataFrame], ba: BoundArguments
+    ) -> dd.core.DataFrame:
 
         result = dd.read_parquet(self.get_path(
             f, ba), calculate_divisions=True)
@@ -234,12 +234,12 @@ class ParquetSerializer(Serializer[dd.DataFrame]):
             result[field_] = result[field_].cat.set_categories(categories)
             assert result[field_].cat.known
 
-        assert isinstance(result, dd.DataFrame)
+        assert isinstance(result, dd.core.DataFrame)
 
         return result
 
     def save_result(
-        self, f: Callable[..., dd.DataFrame], ba: BoundArguments, result: dd.DataFrame
+        self, f: Callable[..., dd.core.DataFrame], ba: BoundArguments, result: dd.core.DataFrame
     ) -> None:
 
         path = self.get_path(f, ba)
@@ -295,7 +295,7 @@ class HDFSerializer(Serializer[dd.DataFrame]):
     hdf_kwargs: Dict[str, Any] = field(default_factory=lambda: {})
 
     def load_result(
-        self, f: Callable[..., dd.DataFrame], ba: BoundArguments
+        self, f: Callable[..., dd.core.DataFrame], ba: BoundArguments
     ) -> dd.DataFrame:
 
         result = dd.read_hdf(self.get_path(f, ba), calculate_divisions=True)
@@ -308,12 +308,12 @@ class HDFSerializer(Serializer[dd.DataFrame]):
             result[field_] = result[field_].cat.set_categories(categories)
             assert result[field_].cat.known
 
-        assert isinstance(result, dd.DataFrame)
+        assert isinstance(result, dd.core.DataFrame)
 
         return result
 
     def save_result(
-        self, f: Callable[..., dd.DataFrame], ba: BoundArguments, result: dd.DataFrame
+        self, f: Callable[..., dd.core.DataFrame], ba: BoundArguments, result: dd.core.DataFrame
     ) -> None:
 
         path = self.get_path(f, ba)

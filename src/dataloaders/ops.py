@@ -9,15 +9,15 @@ def _sort_using_index(data: pd.DataFrame, columns: Sequence[str]) -> pd.DataFram
     return data.set_index(columns, append=True).sort_index().reset_index(columns)
 
 
-def sort_partitions(data: dd.DataFrame, columns: Sequence[str]) -> dd.DataFrame:
+def sort_partitions(data: dd.core.DataFrame, columns: Sequence[str]) -> dd.core.DataFrame:
     result = data.map_partitions(_sort_using_index, columns=columns)
-    assert isinstance(result, dd.DataFrame)
+    assert isinstance(result, dd.core.DataFrame)
     return result
 
 
 def concat_sorted(
-    dfs: List[dd.DataFrame], columns: Optional[List[str]], partition_size: str = "256MB"
-) -> dd.DataFrame:
+    dfs: List[dd.core.DataFrame], columns: Optional[List[str]], partition_size: str = "256MB"
+) -> dd.core.DataFrame:
 
     assert all(df.known_divisions for df in dfs)
 
@@ -27,15 +27,15 @@ def concat_sorted(
         .repartition(partition_size=partition_size)
     )
 
-    assert isinstance(result, dd.DataFrame)
+    assert isinstance(result, dd.core.DataFrame)
     return result
 
 
 def concat_columns_dask(
-    data: dd.DataFrame, columns: Optional[List[str]] = None, sep: str = " "
-) -> dd.Series:
+    data: dd.core.DataFrame, columns: Optional[List[str]] = None, sep: str = " "
+) -> dd.core.Series:
     result = data.map_partitions(concat_columns, columns=columns, sep=sep)
-    assert isinstance(result, dd.Series)
+    assert isinstance(result, dd.core.Series)
     return result
 
 
