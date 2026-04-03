@@ -3,6 +3,9 @@
 # life2vec-light
 Basic implementation of the `life2vec` model with the dummy data. 
 
+> [!IMPORTANT]
+> The data processing pipeline is now implemented as a **standalone package**. It flexible enough to convert various registries and tabular data sources into transformer-ready sequences. Check it out here: [tab2seq](https://github.com/carlomarxdk/tab2seq).
+
 This repository contains basic code for the [Using Sequences of Life-events to Predict Human Lives](https://www.nature.com/articles/s43588-023-00573-5) (life2vec) paper. The [SocialComplexityLab/life2vec](https://github.com/SocialComplexityLab/life2vec) depends (in large) on the specific structure of the data and the version of the packages available.
 
 The code here contains only the model's backbone. Thus, you can easily extend it for your specific use. 
